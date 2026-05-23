@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id"><head><meta charset="UTF-8">
 <meta http-equiv="refresh" content="600">
-<title>Quant Trading Dashboard v7.1</title>
+<title>Quant Trading Dashboard v7.2</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f5f5f7;color:#1d1d1f;padding:20px;font-size:14px}
@@ -42,16 +42,16 @@ tbody tr:hover{background:#fafafa}
 </style></head><body><div class="container">
 
 <div class="header">
-<div><h1>📊 Quant Trading Dashboard v7.1</h1>
+<div><h1>📊 Quant Trading Dashboard v7.2</h1>
 <div class="meta">Auto-generated 2026-05-23 18:30 WIB · 🔄 Auto-refresh tiap 10 menit · Manual refresh: <code>refresh.bat</code> atau Run Now <code>dashboard-refresh</code></div></div>
 <div class="badge-status">● All systems operational</div>
 </div>
 
-<!-- Formula Engine v14.0 Info Bar -->
+<!-- Formula Engine v14.1 Info Bar -->
 <div style="background:linear-gradient(135deg,#1a1a2e 0%,#16213e 50%,#0f3460 100%);color:white;border-radius:12px;padding:14px 18px;margin-bottom:16px;font-size:12px">
   <div style="display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:10px">
     <div>
-      <div style="font-size:14px;font-weight:700;margin-bottom:6px">🧬 Formula Engine v14.0 — 7-Fix Logic Hardening (saling menguatkan)</div>
+      <div style="font-size:14px;font-weight:700;margin-bottom:6px">🧬 Formula Engine v14.1 — 12-Fix Complete (saling menguntungkan, zero conflict)</div>
       <div style="opacity:0.85">
         <span style="background:rgba(255,255,255,0.15);padding:2px 8px;border-radius:4px;margin-right:6px">PRZ(22%)</span>
         <span style="background:rgba(255,255,255,0.15);padding:2px 8px;border-radius:4px;margin-right:6px">TREND(16%)</span>
@@ -63,7 +63,7 @@ tbody tr:hover{background:#fafafa}
         <span style="background:rgba(255,255,255,0.15);padding:2px 8px;border-radius:4px">CANDLE(6%)</span>
       </div>
     </div>
-    <div style="text-align:right;font-size:11px;opacity:0.75">L11 -20 · D1 HARD-BLOCK · W1 HARD-GATE · BASE≥45</div>
+    <div style="text-align:right;font-size:11px;opacity:0.75">L11 -20 · D1 HARD-BLOCK · W1 POST-HTF-GATE · BASE≥45 · BTC→EA-only</div>
   </div>
   <div style="margin-top:10px;display:flex;flex-wrap:wrap;gap:8px">
     <div style="background:rgba(52,199,89,0.2);border:1px solid rgba(52,199,89,0.4);border-radius:6px;padding:5px 10px;font-size:11px">
@@ -73,7 +73,7 @@ tbody tr:hover{background:#fafafa}
       <strong style="color:#67e8f9">HTF Engulfing</strong> · H1:+10 · H4:+15 · Pin H1:+8 H4:+12 · FRESH≤50% next bar · DIV+Pattern:+5
     </div>
     <div style="background:rgba(175,82,222,0.2);border:1px solid rgba(175,82,222,0.4);border-radius:6px;padding:5px 10px;font-size:11px">
-      <strong style="color:#c084fc">PO3 Zone</strong> · lower 33%→BULL+5 · upper 33%→BEAR+5 · <em>closed bar</em> (v14.0 anti-repaint fix)
+      <strong style="color:#c084fc">PO3 Zone</strong> · lower 33%→BULL+5 · upper 33%→BEAR+5 · forming bar (LuxAlgo correct) · real-time position
     </div>
     <div style="background:rgba(255,149,0,0.2);border:1px solid rgba(255,149,0,0.4);border-radius:6px;padding:5px 10px;font-size:11px">
       <strong style="color:#fb923c">PO3 Delta</strong> · M5 ratio≥60% bull→+8 / bear→+8 (Running Delta)
@@ -82,7 +82,7 @@ tbody tr:hover{background:#fafafa}
       <strong style="color:#f87171">W1 Hard Gate</strong> · STRONG(75-84) diblokir W1 contra · Hanya ELITE(≥85) bisa lawan weekly trend
     </div>
     <div style="background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:6px;padding:5px 10px;font-size:11px">
-      <strong>7-Fix v14.0</strong> · PO3-closed · Engulf-fresh · W1-hardgate · BASE≥45 · ADX/DIV-exempt · D1-hardblock · Multi-TF conf +8
+      <strong>12-Fix v14.1</strong> · PO3-forming(correct) · Engulf-perTF(H4:75%,D1:100%) · W1-post-HTF · BASE-prepenalty · BTC-EA-exclusive · ADX/DIV-exempt · D1-hardblock
     </div>
   </div>
 </div>
@@ -1688,7 +1688,7 @@ Threshold: STRONG ≥72 | WATCH 55-67 | SKIP &lt;55. SL/TP ATR-based dynamic. Ru
 <div class="section" style="border-left:4px solid #34c759">
   <div class="section-title">🤖 Multi-Scalper MT5 — Auto Trading Status
     <span style="font-size:11px;font-weight:400;color:#6e6e73;margin-left:10px">
-      📡 Scan sources: <b>MT5-Direct</b> (harmonic-scan-crypto/forex v14.0 — 7-Fix: PO3-closed+Engulf-fresh+W1-hardgate+BASE≥45) + <b>TV-Direct</b> (harmonic-scan-tv v1.0, cron 30 */2)
+      📡 Scan sources: <b>MT5-Direct</b> (harmonic-scan-crypto/forex v14.1 — 12-Fix: PO3-forming+Engulf-perTF+W1-postHTF+BASE-prepenalty+BTC-EA-only) + <b>TV-Direct</b> (harmonic-scan-tv v1.0, cron 30 */2)
     </span>
   </div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:14px;margin-bottom:10px">
@@ -2351,7 +2351,7 @@ Pastikan MT5 desktop running + login HFX sebelum task fire.
 </tr></tbody></table></div>
 
 <div style="text-align:center;padding:24px 0;color:#6e6e73;font-size:11px">
-Quant Trading System v7.1 · Formula v14.0: 7-Fix Logic Hardening (PO3-closed+Engulf-fresh+W1-hardgate+BASE≥45+ADX/DIV-exempt+D1-hardblock) · Modal Rp 500k ($31.63) HFX 1:2000 · 3 scalpers aktif (XAU · Forex · BTC) · build.py auto-refresh
+Quant Trading System v7.2 · Formula v14.1: 12-Fix Complete — zero conflict, saling menguntungkan · Modal Rp 500k ($31.63) HFX 1:2000 · 3 scalpers aktif (XAU · Forex · BTC-EA-only) · build.py auto-refresh
 </div>
 
 </div>
