@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="id"><head><meta charset="UTF-8">
 <meta http-equiv="refresh" content="600">
-<title>Quant Stock Dashboard v7.0 — IDX + US</title>
+<title>Alpha Dashboard v8.0 — IDX + US + Crypto + FX</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#f5f5f7;color:#1d1d1f;padding:20px;font-size:14px}
@@ -42,8 +42,8 @@ tbody tr:hover{background:#fafafa}
 </style></head><body><div class="container">
 
 <div class="header">
-<div><h1>📊 Quant Stock Dashboard v7.0 — 🇮🇩 IDX Syariah + 🇺🇸 US</h1>
-<div class="meta">Auto-generated 2026-06-17 22:29:04 WIB · 🔄 Auto-rebuild: setiap scanner selesai + tiap 10 menit · Manual: Run Now <code>dashboard-refresh</code></div></div>
+<div><h1>📊 Alpha Dashboard v8.0 — 🇮🇩 IDX + 🇺🇸 US + ₿ Crypto + 💱 FX</h1>
+<div class="meta">Auto-generated 2026-07-11 05:51:58 WIB · 🔄 Auto-rebuild: setiap scanner selesai + tiap 10 menit · Manual: Run Now <code>dashboard-refresh</code></div></div>
 <div style="display:flex;align-items:center;gap:10px">
 <button onclick="refreshDashboard()" id="btn-refresh" style="background:#007aff;color:white;border:none;padding:8px 18px;border-radius:12px;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px" title="Reload halaman untuk tampilkan data terbaru.&#10;Untuk regenerasi data: jalankan refresh.bat atau Run Now dashboard-refresh">
   🔄 Refresh
@@ -65,18 +65,18 @@ function refreshDashboard(){
 </script>
 
 <div class="cards">
-<div class="card"><div class="card-label">Total Signals</div><div class="card-value">0</div><div class="card-sub">all-time journal entries</div></div>
-<div class="card"><div class="card-label">Win Rate (closed)</div><div class="card-value red">0.0%</div><div class="card-sub">0W / 0L of 0 closed</div></div>
-<div class="card"><div class="card-label">Total R Realized</div><div class="card-value green">+0.00R</div><div class="card-sub">cumulative paper P/L</div></div>
-<div class="card"><div class="card-label">Active Paper Positions</div><div class="card-value">24</div><div class="card-sub">virtual entries tracking</div></div>
+<div class="card"><div class="card-label">Total Signals</div><div class="card-value">4</div><div class="card-sub">all-time journal entries</div></div>
+<div class="card"><div class="card-label">Win Rate (closed)</div><div class="card-value green">100.0%</div><div class="card-sub">4W / 0L of 4 closed</div></div>
+<div class="card"><div class="card-label">Total R Realized</div><div class="card-value green">+6.62R</div><div class="card-sub">cumulative paper P/L</div></div>
+<div class="card"><div class="card-label">Active Paper Positions</div><div class="card-value">80</div><div class="card-sub">virtual entries tracking</div></div>
 </div>
 
 <div class="row-2col">
-<div class="section"><div class="section-title">TP Distribution (0 closed)</div>
+<div class="section"><div class="section-title">TP Distribution (4 closed)</div>
 <div class="tp-dist">
-<div class="tp-row"><div class="tp-label">TP1 Hit</div><div class="tp-bar"><div class="tp-bar-fill" style="width:0%;background:#5ac8fa"></div></div><div class="tp-count">0 · 0%</div></div>
+<div class="tp-row"><div class="tp-label">TP1 Hit</div><div class="tp-bar"><div class="tp-bar-fill" style="width:25%;background:#5ac8fa"></div></div><div class="tp-count">1 · 25%</div></div>
 <div class="tp-row"><div class="tp-label">TP2 Hit</div><div class="tp-bar"><div class="tp-bar-fill" style="width:0%;background:#34c759"></div></div><div class="tp-count">0 · 0%</div></div>
-<div class="tp-row"><div class="tp-label">TP3 Hit</div><div class="tp-bar"><div class="tp-bar-fill" style="width:0%;background:#1c7d3a"></div></div><div class="tp-count">0 · 0%</div></div>
+<div class="tp-row"><div class="tp-label">TP3 Hit</div><div class="tp-bar"><div class="tp-bar-fill" style="width:75%;background:#1c7d3a"></div></div><div class="tp-count">3 · 75%</div></div>
 <div class="tp-row"><div class="tp-label">Stop Loss</div><div class="tp-bar"><div class="tp-bar-fill" style="width:0%;background:#ff3b30"></div></div><div class="tp-count">0 · 0%</div></div>
 <div class="tp-row"><div class="tp-label">Invalidated</div><div class="tp-bar"><div class="tp-bar-fill" style="width:0%;background:#ff9500"></div></div><div class="tp-count">0 · 0%</div></div>
 </div></div>
@@ -90,29 +90,117 @@ function refreshDashboard(){
 <div class="tp-label">🇺🇸 US</div>
 <div class="tp-bar"><div class="tp-bar-fill" style="width:0%;background:#6e6e73"></div></div>
 <div class="tp-count ">0W/0L · 0% wr</div>
+</div><div class="tp-row">
+<div class="tp-label">₿ Crypto</div>
+<div class="tp-bar"><div class="tp-bar-fill" style="width:100.0%;background:#34c759"></div></div>
+<div class="tp-count green">4W/0L · 100% wr</div>
+</div><div class="tp-row">
+<div class="tp-label">💱 Forex</div>
+<div class="tp-bar"><div class="tp-bar-fill" style="width:0%;background:#6e6e73"></div></div>
+<div class="tp-count ">0W/0L · 0% wr</div>
 </div></div></div>
+</div>
+
+
+<div class="section" style="border-left:4px solid #ffd60a">
+<div class="section-title">⚡ Alpha Formula Status — v11.1 (Fable-5 accuracy audit)</div>
+<div style="font-size:12px;color:#6e6e73;margin-bottom:12px">
+3-layer alpha model per market: <strong>ALPHA CORE</strong> (faktor ber-IC tinggi, dominan) → <strong>TIMING</strong> (teknikal) → <strong>QUALITY/OVERLAY</strong>.
+Direction-relative penuh · Alpha-Confirm guard (ELITE wajib ≥2 core positif) · Zero-Alpha→WATCH · Tier: ELITE≥80 / TRADEABLE≥65 / WATCH≥55.
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px"><div class="card" style="padding:14px;border-top:3px solid #34c759">
+<div class="card-label">🇮🇩 IDX Syariah</div>
+<div style="font-size:15px;font-weight:600;margin:6px 0 4px">v11.1 ALPHA-IDX</div>
+<div style="font-size:11px;color:#6e6e73;margin-bottom:6px">Foreign Flow · Mansfield RS · Momentum · Wyckoff</div>
+<div style="font-size:10px;color:#8e8e93;font-family:monospace">tools/scan_idx_alpha_v11.py</div>
+</div><div class="card" style="padding:14px;border-top:3px solid #5ac8fa">
+<div class="card-label">🇺🇸 US Stocks</div>
+<div style="font-size:15px;font-weight:600;margin:6px 0 4px">v11.1 ALPHA-US</div>
+<div style="font-size:11px;color:#6e6e73;margin-bottom:6px">PEAD/Earnings · Revisions · RS · Momentum · Inst-Flow</div>
+<div style="font-size:10px;color:#8e8e93;font-family:monospace">tools/scan_us_alpha_v11.py --enrich</div>
+</div><div class="card" style="padding:14px;border-top:3px solid #ff9500">
+<div class="card-label">₿ Crypto</div>
+<div style="font-size:15px;font-weight:600;margin:6px 0 4px">v11.1 ALPHA-CRYPTO</div>
+<div style="font-size:11px;color:#6e6e73;margin-bottom:6px">Momentum · RS-vs-BTC · Funding/OI · On-chain</div>
+<div style="font-size:10px;color:#8e8e93;font-family:monospace">tools/scan_crypto_alpha_v11.py --enrich</div>
+</div><div class="card" style="padding:14px;border-top:3px solid #af52de">
+<div class="card-label">💱 Forex</div>
+<div style="font-size:15px;font-weight:600;margin:6px 0 4px">v11.1 ALPHA-FX</div>
+<div style="font-size:11px;color:#6e6e73;margin-bottom:6px">Currency Strength · Carry/Policy · COT · DXY</div>
+<div style="font-size:10px;color:#8e8e93;font-family:monospace">tools/scan_fx_alpha_v11.py</div>
+</div>
+<div class="card" style="padding:14px;border-top:3px solid #ffd60a">
+<div class="card-label">🥇 XAU M1 Scalper (MT5)</div>
+<div style="font-size:15px;font-weight:600;margin:6px 0 4px">v6.1 ALPHA-XAU-M1</div>
+<div style="font-size:11px;color:#6e6e73;margin-bottom:6px">Micro-Trend+HTF · VWAP · Liquidity-Sweep · Momentum-Burst — anti coin-flip (conviction≥65, ≥3/4 pilar)</div>
+<div style="font-size:10px;color:#8e8e93;font-family:monospace">auto_trader_forex/xau_m1_alpha.py</div>
+</div>
+</div>
+<div style="margin-top:10px;padding:10px;background:#f0f9f2;border-radius:6px;font-size:11px;color:#1c7d3a">
+<strong>Bukti kalibrasi (replay bar M1 riil):</strong><br>
+<span style="font-family:monospace">[CAL] bars=8000 atr-skipped=7 | signals=18 (BUY=9 SELL=9) resolved=18</span><br>
+<span style="font-family:monospace">[CAL] WR=72.2% (W13/L5, unresolved=0) | netR=+2.15 | nominal RR=1:0.62 -> breakeven WR=61.5%</span></div>
 </div>
 
 <div class="section"><div class="section-title">Active Setups & Pending Zones (combined)
   <div style="font-size:11px;font-weight:400;color:#6e6e73;margin-top:4px">
-    Sumber: <code>harmonic-prz-scan/state.json</code> (semua market digabung). Dashboard di-build: <strong>2026-06-17 22:29:04 WIB</strong>.
+    Sumber: <code>harmonic-prz-scan/state.json</code> (semua market digabung). Dashboard di-build: <strong>2026-07-11 05:51:58 WIB</strong>.
     Kolom <strong>Updated</strong> = drawn_at per setup. Tanda ⚠️ STALE = lebih lama dari batas freshness per TF.
   </div>
 </div>
 <table><thead><tr><th>Side</th><th>Symbol</th><th>TF</th><th>Entry</th><th>SL</th><th>TP1</th><th>TP2</th><th>TP3</th><th>Score</th><th>Pattern</th><th>Tier</th><th title="drawn_at per setup. STALE = lebih tua dari max age TF">Updated</th></tr></thead>
 <tbody><tr>
-<td><span class="badge badge-buy">BUY</span></td>
-<td>ANTM</td>
+<td><span class="badge badge-sell">SELL</span></td>
+<td>XAUUSD</td>
 <td>1D</td>
-<td>3500.0</td>
-<td class="red">3350.0</td>
-<td>3800.0</td>
-<td>4100.0</td>
-<td>4500.0</td>
-<td class="score-cell orange" data-sort="57">57%</td>
-<td>Bull ABCD approaching D-zone (</td>
+<td>4540.09</td>
+<td class="red">4703.668905</td>
+<td>4321.984793</td>
+<td>4158.405886</td>
+<td>3994.82698</td>
+<td class="score-cell green" data-sort="60">60%</td>
+<td>MT5-engine v10.0 (BEARISH)</td>
 <td><span class="badge badge-watch">WATCH</span></td>
-<td class="orange" style="font-size:11px" data-sort="940.9495" title="drawn_at: 2026-05-09T09:32:06.095782+00:00">39d 4h ⚠️ STALE</td>
+<td class="orange" style="font-size:11px" data-sort="1283.7917" title="drawn_at: 2026-05-18T10:04:28.658616+00:00">53d 11h ⚠️ STALE</td>
+</tr><tr>
+<td><span class="badge badge-sell">SELL</span></td>
+<td>BTCUSD</td>
+<td>1D</td>
+<td>75927.318</td>
+<td class="red">78797.902654</td>
+<td>72099.871794</td>
+<td>69229.287139</td>
+<td>66358.702485</td>
+<td class="score-cell green" data-sort="70">70%</td>
+<td>MT5-engine v10.0 (STRONG BEARI</td>
+<td><span class="badge badge-watch">WATCH</span></td>
+<td class="orange" style="font-size:11px" data-sort="1159.0283" title="drawn_at: 2026-05-23T14:50:16.882689+00:00">48d 7h ⚠️ STALE</td>
+</tr><tr>
+<td><span class="badge badge-sell">SELL</span></td>
+<td>ETHUSD</td>
+<td>1D</td>
+<td>2091.054</td>
+<td class="red">2208.572645</td>
+<td>1934.362474</td>
+<td>1816.84383</td>
+<td>1699.325185</td>
+<td class="score-cell orange" data-sort="57">57%</td>
+<td>MT5-engine v10.0 (STRONG BEARI</td>
+<td><span class="badge badge-watch">WATCH</span></td>
+<td class="orange" style="font-size:11px" data-sort="1117.6661" title="drawn_at: 2026-05-25T08:12:00.837074+00:00">46d 13h ⚠️ STALE</td>
+</tr><tr>
+<td><span class="badge badge-buy">BUY</span></td>
+<td>ETHUSD</td>
+<td>1D</td>
+<td>1626.164</td>
+<td class="red">1480.368173</td>
+<td>1820.558436</td>
+<td>1966.354263</td>
+<td>2112.15009</td>
+<td class="score-cell green" data-sort="60">60%</td>
+<td>MT5-engine v10.0 (BEARISH)</td>
+<td><span class="badge badge-watch">WATCH</span></td>
+<td class="orange" style="font-size:11px" data-sort="790.6426" title="drawn_at: 2026-06-07T23:13:25.384548+00:00">32d 22h ⚠️ STALE</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>BMRI</td>
@@ -125,20 +213,7 @@ function refreshDashboard(){
 <td class="score-cell orange" data-sort="59">59%</td>
 <td>Doji+Vol-KUAT WATCH</td>
 <td><span class="badge badge-watch">WATCH</span></td>
-<td class="gray" style="font-size:11px" data-sort="688.4906" title="drawn_at: 2026-05-19T21:59:38.298375+00:00">28d 16h</td>
-</tr><tr>
-<td><span class="badge badge-buy">BUY</span></td>
-<td>BBNI</td>
-<td>1D</td>
-<td>3800.0</td>
-<td class="red">3650.0</td>
-<td>3970.0</td>
-<td>4120.0</td>
-<td>4300.0</td>
-<td class="score-cell orange" data-sort="52">52%</td>
-<td>Bull Fib 23.6% support (X=4730</td>
-<td><span class="badge badge-watch">WATCH</span></td>
-<td class="orange" style="font-size:11px" data-sort="940.9495" title="drawn_at: 2026-05-09T09:32:06.095782+00:00">39d 4h ⚠️ STALE</td>
+<td class="orange" style="font-size:11px" data-sort="1247.8724" title="drawn_at: 2026-05-19T21:59:38.298375+00:00">51d 23h ⚠️ STALE</td>
 </tr><tr>
 <td><span class="badge badge-sell">SELL</span></td>
 <td>MSFT</td>
@@ -151,7 +226,7 @@ function refreshDashboard(){
 <td class="score-cell green" data-sort="78">78%</td>
 <td>v11.0 AlphaUS BEAR a=+22 inver</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0001" title="drawn_at: 2026-06-17T14:29:04.108271+00:00">0m ago</td>
+<td class="gray" style="font-size:11px" data-sort="559.3819" title="drawn_at: 2026-06-17T14:29:04.108271+00:00">23d 7h</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>MSFT</td>
@@ -164,20 +239,7 @@ function refreshDashboard(){
 <td class="score-cell green" data-sort="60">60%</td>
 <td>v10.4 NEUTRAL W1-Contra Vol-Lo</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="531.4256" title="drawn_at: 2026-05-26T11:03:32.142686+00:00">22d 3h</td>
-</tr><tr>
-<td><span class="badge badge-buy">BUY</span></td>
-<td>META</td>
-<td>1D</td>
-<td>610.0</td>
-<td class="red">583.0</td>
-<td>626.0</td>
-<td>641.0</td>
-<td>660.0</td>
-<td class="score-cell orange" data-sort="50">50%</td>
-<td>Bull recovery at 50pct fib ret</td>
-<td><span class="badge badge-watch">WATCH</span></td>
-<td class="orange" style="font-size:11px" data-sort="940.3914" title="drawn_at: 2026-05-09T10:05:35.371048+00:00">39d 4h ⚠️ STALE</td>
+<td class="orange" style="font-size:11px" data-sort="1090.8074" title="drawn_at: 2026-05-26T11:03:32.142686+00:00">45d 10h ⚠️ STALE</td>
 </tr><tr>
 <td><span class="badge badge-sell">SELL</span></td>
 <td>META</td>
@@ -190,7 +252,7 @@ function refreshDashboard(){
 <td class="score-cell green" data-sort="75">75%</td>
 <td>v11.0 AlphaUS BEAR a=+19 inver</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0001" title="drawn_at: 2026-06-17T14:29:04.108271+00:00">0m ago</td>
+<td class="gray" style="font-size:11px" data-sort="559.3819" title="drawn_at: 2026-06-17T14:29:04.108271+00:00">23d 7h</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>TLKM</td>
@@ -203,7 +265,7 @@ function refreshDashboard(){
 <td class="score-cell green" data-sort="85">85%</td>
 <td>Engulf+Vol+L11-BULL ELITE [TRA</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="688.4906" title="drawn_at: 2026-05-19T21:59:38.298375+00:00">28d 16h</td>
+<td class="orange" style="font-size:11px" data-sort="1247.8724" title="drawn_at: 2026-05-19T21:59:38.298375+00:00">51d 23h ⚠️ STALE</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>ASII</td>
@@ -216,7 +278,7 @@ function refreshDashboard(){
 <td class="score-cell orange" data-sort="57">57%</td>
 <td>HL+Vol WATCH</td>
 <td><span class="badge badge-watch">WATCH</span></td>
-<td class="gray" style="font-size:11px" data-sort="688.4906" title="drawn_at: 2026-05-19T21:59:38.298375+00:00">28d 16h</td>
+<td class="orange" style="font-size:11px" data-sort="1247.8724" title="drawn_at: 2026-05-19T21:59:38.298375+00:00">51d 23h ⚠️ STALE</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>GOOGL</td>
@@ -229,7 +291,7 @@ function refreshDashboard(){
 <td class="score-cell green" data-sort="64">64%</td>
 <td>v10.4 CONT-BULL Vol-Low Cluste</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="531.4256" title="drawn_at: 2026-05-26T11:03:32.142686+00:00">22d 3h</td>
+<td class="orange" style="font-size:11px" data-sort="1090.8074" title="drawn_at: 2026-05-26T11:03:32.142686+00:00">45d 10h ⚠️ STALE</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>TSLA</td>
@@ -242,7 +304,7 @@ function refreshDashboard(){
 <td class="score-cell green" data-sort="61">61%</td>
 <td>PinBar+HH/HL Recovery</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="591.7842" title="drawn_at: 2026-05-23T22:42:01.302741+00:00">24d 15h</td>
+<td class="orange" style="font-size:11px" data-sort="1151.1660" title="drawn_at: 2026-05-23T22:42:01.302741+00:00">47d 23h ⚠️ STALE</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>MDKA</td>
@@ -255,7 +317,7 @@ function refreshDashboard(){
 <td class="score-cell orange" data-sort="58">58%</td>
 <td>RSI DIV BULL(lb5) + ENGULF-BUL</td>
 <td><span class="badge badge-watch">WATCH</span></td>
-<td class="gray" style="font-size:11px" data-sort="586.0927" title="drawn_at: 2026-05-24T04:23:30.782486+00:00">24d 10h</td>
+<td class="orange" style="font-size:11px" data-sort="1145.4744" title="drawn_at: 2026-05-24T04:23:30.782486+00:00">47d 17h ⚠️ STALE</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>CUAN</td>
@@ -268,7 +330,7 @@ function refreshDashboard(){
 <td class="score-cell orange" data-sort="53">53%</td>
 <td>Extreme oversold RSI18.7 falli</td>
 <td><span class="badge badge-watch">WATCH</span></td>
-<td class="gray" style="font-size:11px" data-sort="599.4172" title="drawn_at: 2026-05-23T15:04:02.439603+00:00">24d 23h</td>
+<td class="orange" style="font-size:11px" data-sort="1158.7990" title="drawn_at: 2026-05-23T15:04:02.439603+00:00">48d 6h ⚠️ STALE</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>MBMA</td>
@@ -281,33 +343,33 @@ function refreshDashboard(){
 <td class="score-cell orange" data-sort="55">55%</td>
 <td>ENGULF-BULL + Vol 2.8x - RSI 3</td>
 <td><span class="badge badge-watch">WATCH</span></td>
-<td class="gray" style="font-size:11px" data-sort="586.0927" title="drawn_at: 2026-05-24T04:23:30.782486+00:00">24d 10h</td>
+<td class="orange" style="font-size:11px" data-sort="1145.4744" title="drawn_at: 2026-05-24T04:23:30.782486+00:00">47d 17h ⚠️ STALE</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>MAPI</td>
 <td>1D</td>
-<td>1500.0</td>
-<td class="red">1465.53</td>
-<td>1534.47</td>
-<td>1551.7</td>
-<td>1568.94</td>
-<td class="score-cell green" data-sort="76">76%</td>
+<td>1525.0</td>
+<td class="red">1499.83</td>
+<td>1550.17</td>
+<td>1562.76</td>
+<td>1575.34</td>
+<td class="score-cell green" data-sort="80">80%</td>
 <td>v11.0 Alpha Stage 2 (advancing</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.2758" title="drawn_at: 2026-06-17T14:12:31.392706+00:00">16m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0064" title="drawn_at: 2026-07-10T21:51:35.819714+00:00">0m ago</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>LLY</td>
 <td>1D</td>
-<td>1065.0</td>
-<td class="red">1038.0</td>
-<td>1086.0</td>
-<td>1105.0</td>
-<td>1132.0</td>
-<td class="score-cell green" data-sort="80">80%</td>
-<td>v10.4 NEUTRAL Trend+8 Struct+5</td>
-<td><span class="badge badge-tradeable">ELITE</span></td>
-<td class="gray" style="font-size:11px" data-sort="531.4256" title="drawn_at: 2026-05-26T11:03:32.142686+00:00">22d 3h</td>
+<td>1188.58</td>
+<td class="red">1130.51</td>
+<td>1246.64</td>
+<td>1285.36</td>
+<td>1343.42</td>
+<td class="score-cell green" data-sort="69">69%</td>
+<td>v11.0 AlphaUS BULL a=+12 Miner</td>
+<td><span class="badge badge-tradeable">TRADEABLE</span></td>
+<td class="gray" style="font-size:11px" data-sort="0.0026" title="drawn_at: 2026-07-10T21:51:49.409848+00:00">0m ago</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>XOM</td>
@@ -320,7 +382,7 @@ function refreshDashboard(){
 <td class="score-cell green" data-sort="76">76%</td>
 <td>v10.4 NEUTRAL Mom+5 Struct+5</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="531.4256" title="drawn_at: 2026-05-26T11:03:32.142686+00:00">22d 3h</td>
+<td class="orange" style="font-size:11px" data-sort="1090.8074" title="drawn_at: 2026-05-26T11:03:32.142686+00:00">45d 10h ⚠️ STALE</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>AAPL</td>
@@ -333,46 +395,46 @@ function refreshDashboard(){
 <td class="score-cell green" data-sort="73">73%</td>
 <td>v10.4 CONT-BULL ClusterCap-5</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="531.4256" title="drawn_at: 2026-05-26T11:03:32.142686+00:00">22d 3h</td>
+<td class="orange" style="font-size:11px" data-sort="1090.8074" title="drawn_at: 2026-05-26T11:03:32.142686+00:00">45d 10h ⚠️ STALE</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>CRWD</td>
 <td>1D</td>
-<td>663.46</td>
-<td class="red">646.9</td>
-<td>676.73</td>
-<td>689.63</td>
-<td>704.73</td>
-<td class="score-cell green" data-sort="73">73%</td>
-<td>v10.4 CONT-BULL ADX=44 Cluster</td>
+<td>187.18</td>
+<td class="red">172.75</td>
+<td>201.61</td>
+<td>211.23</td>
+<td>225.66</td>
+<td class="score-cell green" data-sort="76">76%</td>
+<td>v11.0 AlphaUS BULL a=+19 Miner</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="531.4256" title="drawn_at: 2026-05-26T11:03:32.142686+00:00">22d 3h</td>
+<td class="gray" style="font-size:11px" data-sort="0.0026" title="drawn_at: 2026-07-10T21:51:49.409848+00:00">0m ago</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>NVDA</td>
 <td>1D</td>
-<td>215.33</td>
-<td class="red">209.95</td>
-<td>219.64</td>
-<td>223.42</td>
-<td>228.72</td>
-<td class="score-cell green" data-sort="71">71%</td>
-<td>v10.4 CONT-BULL ClusterCap-2</td>
+<td>210.96</td>
+<td class="red">200.21</td>
+<td>221.72</td>
+<td>228.89</td>
+<td>239.64</td>
+<td class="score-cell green" data-sort="78">78%</td>
+<td>v11.0 AlphaUS BULL a=+13 Miner</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="531.4256" title="drawn_at: 2026-05-26T11:03:32.142686+00:00">22d 3h</td>
+<td class="gray" style="font-size:11px" data-sort="0.0026" title="drawn_at: 2026-07-10T21:51:49.409848+00:00">0m ago</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>ARM</td>
 <td>1D</td>
-<td>396.34</td>
-<td class="red">345.0</td>
-<td>447.68</td>
-<td>481.91</td>
-<td>533.26</td>
-<td class="score-cell green" data-sort="76">76%</td>
-<td>v11.0 AlphaUS BULL a=+19 Miner</td>
+<td>323.39</td>
+<td class="red">276.2</td>
+<td>370.58</td>
+<td>402.04</td>
+<td>449.23</td>
+<td class="score-cell green" data-sort="67">67%</td>
+<td>v11.0 AlphaUS BULL a=+12 Miner</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0001" title="drawn_at: 2026-06-17T14:29:04.108271+00:00">0m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0026" title="drawn_at: 2026-07-10T21:51:49.409848+00:00">0m ago</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>COST</td>
@@ -385,20 +447,33 @@ function refreshDashboard(){
 <td class="score-cell green" data-sort="67">67%</td>
 <td>v10.4 NEUTRAL Mom+5 Struct+5</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="531.4256" title="drawn_at: 2026-05-26T11:03:32.142686+00:00">22d 3h</td>
+<td class="orange" style="font-size:11px" data-sort="1090.8074" title="drawn_at: 2026-05-26T11:03:32.142686+00:00">45d 10h ⚠️ STALE</td>
+</tr><tr>
+<td><span class="badge badge-sell">SELL</span></td>
+<td>COST</td>
+<td>1D</td>
+<td>916.25</td>
+<td class="red">947.99</td>
+<td>884.51</td>
+<td>863.35</td>
+<td>831.61</td>
+<td class="score-cell green" data-sort="78">78%</td>
+<td>v11.0 AlphaUS BEAR a=+19 inver</td>
+<td><span class="badge badge-tradeable">TRADEABLE</span></td>
+<td class="gray" style="font-size:11px" data-sort="0.0026" title="drawn_at: 2026-07-10T21:51:49.409848+00:00">0m ago</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>AMD</td>
 <td>1D</td>
-<td>507.29</td>
-<td class="red">456.28</td>
-<td>558.31</td>
-<td>592.32</td>
-<td>643.33</td>
+<td>557.89</td>
+<td class="red">503.54</td>
+<td>612.24</td>
+<td>648.46</td>
+<td>702.81</td>
 <td class="score-cell green" data-sort="81">81%</td>
 <td>v11.0 AlphaUS BULL a=+19 Miner</td>
 <td><span class="badge badge-tradeable">ELITE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0001" title="drawn_at: 2026-06-17T14:29:04.108271+00:00">0m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0026" title="drawn_at: 2026-07-10T21:51:49.409848+00:00">0m ago</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>AVGO</td>
@@ -411,20 +486,20 @@ function refreshDashboard(){
 <td class="score-cell green" data-sort="64">64%</td>
 <td>v10.4 NEUTRAL Vol-Low</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="531.4256" title="drawn_at: 2026-05-26T11:03:32.142686+00:00">22d 3h</td>
+<td class="orange" style="font-size:11px" data-sort="1090.8074" title="drawn_at: 2026-05-26T11:03:32.142686+00:00">45d 10h ⚠️ STALE</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>QQQ</td>
 <td>1D</td>
-<td>729.86</td>
-<td class="red">706.45</td>
-<td>753.27</td>
-<td>768.88</td>
-<td>792.3</td>
-<td class="score-cell green" data-sort="72">72%</td>
+<td>725.51</td>
+<td class="red">702.44</td>
+<td>748.58</td>
+<td>763.96</td>
+<td>787.03</td>
+<td class="score-cell green" data-sort="67">67%</td>
 <td>v11.0 AlphaUS BULL a=+11 Miner</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0001" title="drawn_at: 2026-06-17T14:29:04.108271+00:00">0m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0026" title="drawn_at: 2026-07-10T21:51:49.409848+00:00">0m ago</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>MRVL</td>
@@ -437,20 +512,20 @@ function refreshDashboard(){
 <td class="score-cell green" data-sort="69">69%</td>
 <td>v11.0 AlphaUS BULL a=+12 Miner</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0001" title="drawn_at: 2026-06-17T14:29:04.108271+00:00">0m ago</td>
+<td class="gray" style="font-size:11px" data-sort="559.3819" title="drawn_at: 2026-06-17T14:29:04.108271+00:00">23d 7h</td>
 </tr><tr>
 <td><span class="badge badge-sell">SELL</span></td>
 <td>NFLX</td>
 <td>1D</td>
-<td>78.72</td>
-<td class="red">82.09</td>
-<td>75.34</td>
-<td>73.09</td>
-<td>69.72</td>
-<td class="score-cell green" data-sort="86">86%</td>
-<td>v11.0 AlphaUS BEAR a=+22 inver</td>
+<td>73.37</td>
+<td class="red">77.12</td>
+<td>69.62</td>
+<td>67.12</td>
+<td>63.37</td>
+<td class="score-cell green" data-sort="81">81%</td>
+<td>v11.0 AlphaUS BEAR a=+19 inver</td>
 <td><span class="badge badge-tradeable">ELITE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0001" title="drawn_at: 2026-06-17T14:29:04.108271+00:00">0m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0026" title="drawn_at: 2026-07-10T21:51:49.409848+00:00">0m ago</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>SPY</td>
@@ -463,35 +538,36 @@ function refreshDashboard(){
 <td class="score-cell green" data-sort="70">70%</td>
 <td>v11.0 AlphaUS BULL a=+7 Minerv</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0001" title="drawn_at: 2026-06-17T14:29:04.108271+00:00">0m ago</td>
+<td class="gray" style="font-size:11px" data-sort="559.3819" title="drawn_at: 2026-06-17T14:29:04.108271+00:00">23d 7h</td>
 </tr></tbody></table></div>
 
 <!-- Per-market tables -->
 
 <div class="section" style="border-left:4px solid #34c759">
-<div class="section-title">🇮🇩 Indonesia Syariah (30) — Latest Scan</div>
+<div class="section-title">🇮🇩 Indonesia Syariah (30) — ALPHA-IDX — Latest Scan</div>
+<div style="margin-bottom:8px;font-size:11px;color:#6e6e73"><strong>Formula:</strong> v11.1 ALPHA-IDX (High-IC Factor Model + foreign-flow sidecar + zero-alpha guard)</div>
 <div style="display:flex;gap:18px;font-size:12px;color:#6e6e73;margin-bottom:10px;flex-wrap:wrap">
 <div><strong>Symbols:</strong> 30</div>
-<div><strong style="color:#34c759">TRADEABLE:</strong> 2</div>
-<div><strong style="color:#856404">WATCH:</strong> 5</div>
+<div><strong style="color:#34c759">TRADEABLE:</strong> 3</div>
+<div><strong style="color:#856404">WATCH:</strong> 4</div>
 <div><strong style="color:#6e6e73">SKIP:</strong> 0</div>
-<div><strong>Last scan:</strong> 2026-06-17 14:12</div>
+<div><strong>Last scan:</strong> 2026-07-10 21:51</div>
 </div>
 <table><thead><tr><th>Symbol</th><th>Side</th><th>TF</th><th>Score</th><th>Tier</th><th title="Entry trigger price — waiting price untuk auto-execute jika tier TRADEABLE">Entry Trigger</th><th>SL</th><th>TP1</th><th>TP2</th><th>TP3</th><th title="Estimated time TP3 reached based on TF">ETA TP3</th><th title="drawn_at per setup (waktu scanner terakhir update setup ini)">Updated</th></tr></thead>
-<tbody><tr style="opacity:0.55">
-<td>ANTM</td>
+<tbody><tr>
+<td>ADRO</td>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>1D</td>
-<td class="score-cell orange" data-sort="57">57%</td>
-<td><span class="badge badge-watch">WATCH</span></td>
-<td class="orange" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">3500.0</td>
-<td class="red">3350.0</td>
-<td>3800.0</td>
-<td>4100.0</td>
-<td>4500.0</td>
+<td class="score-cell green" data-sort="71">71%</td>
+<td><span class="badge badge-tradeable">TRADEABLE</span></td>
+<td class="green" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">2330.0</td>
+<td class="red">2195.84</td>
+<td>2464.16</td>
+<td>2531.24</td>
+<td>2598.32</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="orange" style="font-size:11px" data-sort="940.9495" title="drawn_at: 2026-05-09T09:32:06.095782+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">39d 4h ⚠️</td>
-</tr><tr>
+<td class="gray" style="font-size:11px" data-sort="551.4700" title="drawn_at: 2026-06-17T22:23:46.785022+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">22d 23h</td>
+</tr><tr style="opacity:0.55">
 <td>MDKA</td>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>1D</td>
@@ -503,8 +579,8 @@ function refreshDashboard(){
 <td>3490.0</td>
 <td>4004.0</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="586.0927" title="drawn_at: 2026-05-24T04:23:30.782486+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">24d 10h</td>
-</tr><tr>
+<td class="orange" style="font-size:11px" data-sort="1145.4744" title="drawn_at: 2026-05-24T04:23:30.782486+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">47d 17h ⚠️</td>
+</tr><tr style="opacity:0.55">
 <td>CUAN</td>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>1D</td>
@@ -516,8 +592,8 @@ function refreshDashboard(){
 <td>830.0</td>
 <td>1039.0</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="599.4172" title="drawn_at: 2026-05-23T15:04:02.439603+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">24d 23h</td>
-</tr><tr>
+<td class="orange" style="font-size:11px" data-sort="1158.7990" title="drawn_at: 2026-05-23T15:04:02.439603+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">48d 6h ⚠️</td>
+</tr><tr style="opacity:0.55">
 <td>MBMA</td>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>1D</td>
@@ -529,8 +605,8 @@ function refreshDashboard(){
 <td>667.0</td>
 <td>778.0</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="586.0927" title="drawn_at: 2026-05-24T04:23:30.782486+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">24d 10h</td>
-</tr><tr>
+<td class="orange" style="font-size:11px" data-sort="1145.4744" title="drawn_at: 2026-05-24T04:23:30.782486+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">47d 17h ⚠️</td>
+</tr><tr style="opacity:0.55">
 <td>TLKM</td>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>1D</td>
@@ -542,8 +618,8 @@ function refreshDashboard(){
 <td>3220.0</td>
 <td>3350.0</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="688.4906" title="drawn_at: 2026-05-19T21:59:38.298375+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">28d 16h</td>
-</tr><tr>
+<td class="orange" style="font-size:11px" data-sort="1247.8724" title="drawn_at: 2026-05-19T21:59:38.298375+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">51d 23h ⚠️</td>
+</tr><tr style="opacity:0.55">
 <td>ASII</td>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>1D</td>
@@ -555,33 +631,34 @@ function refreshDashboard(){
 <td>6100.0</td>
 <td>6250.0</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="688.4906" title="drawn_at: 2026-05-19T21:59:38.298375+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">28d 16h</td>
+<td class="orange" style="font-size:11px" data-sort="1247.8724" title="drawn_at: 2026-05-19T21:59:38.298375+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">51d 23h ⚠️</td>
 </tr><tr>
 <td>MAPI</td>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>1D</td>
-<td class="score-cell green" data-sort="76">76%</td>
+<td class="score-cell green" data-sort="80">80%</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="green" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">1500.0</td>
-<td class="red">1465.53</td>
-<td>1534.47</td>
-<td>1551.7</td>
-<td>1568.94</td>
+<td class="green" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">1525.0</td>
+<td class="red">1499.83</td>
+<td>1550.17</td>
+<td>1562.76</td>
+<td>1575.34</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.2758" title="drawn_at: 2026-06-17T14:12:31.392706+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">16m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0064" title="drawn_at: 2026-07-10T21:51:35.819714+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">0m ago</td>
 </tr></tbody></table>
 </div>
 <div class="section" style="border-left:4px solid #5ac8fa">
-<div class="section-title">🇺🇸 Amerika (20) — Latest Scan</div>
+<div class="section-title">🇺🇸 Amerika (20) — ALPHA-US — Latest Scan</div>
+<div style="margin-bottom:8px;font-size:11px;color:#6e6e73"><strong>Formula:</strong> v11.1 ALPHA-US (High-IC Factor Model, direction-relative + zero-alpha guard)</div>
 <div style="display:flex;gap:18px;font-size:12px;color:#6e6e73;margin-bottom:10px;flex-wrap:wrap">
 <div><strong>Symbols:</strong> 20</div>
-<div><strong style="color:#34c759">TRADEABLE:</strong> 18</div>
-<div><strong style="color:#856404">WATCH:</strong> 1</div>
+<div><strong style="color:#34c759">TRADEABLE:</strong> 20</div>
+<div><strong style="color:#856404">WATCH:</strong> 0</div>
 <div><strong style="color:#6e6e73">SKIP:</strong> 0</div>
-<div><strong>Last scan:</strong> 2026-06-17 14:29</div>
+<div><strong>Last scan:</strong> 2026-07-10 21:51</div>
 </div>
 <table><thead><tr><th>Symbol</th><th>Side</th><th>TF</th><th>Score</th><th>Tier</th><th title="Entry trigger price — waiting price untuk auto-execute jika tier TRADEABLE">Entry Trigger</th><th>SL</th><th>TP1</th><th>TP2</th><th>TP3</th><th title="Estimated time TP3 reached based on TF">ETA TP3</th><th title="drawn_at per setup (waktu scanner terakhir update setup ini)">Updated</th></tr></thead>
-<tbody><tr>
+<tbody><tr style="opacity:0.55">
 <td>AAPL</td>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>1D</td>
@@ -593,7 +670,7 @@ function refreshDashboard(){
 <td>320.49</td>
 <td>328.13</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="531.4256" title="drawn_at: 2026-05-26T11:03:32.142686+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">22d 3h</td>
+<td class="orange" style="font-size:11px" data-sort="1090.8074" title="drawn_at: 2026-05-26T11:03:32.142686+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">45d 10h ⚠️</td>
 </tr><tr>
 <td>MSFT</td>
 <td><span class="badge badge-sell">SELL</span></td>
@@ -606,8 +683,8 @@ function refreshDashboard(){
 <td>364.15</td>
 <td>346.35</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0001" title="drawn_at: 2026-06-17T14:29:04.108271+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">0m ago</td>
-</tr><tr>
+<td class="gray" style="font-size:11px" data-sort="559.3819" title="drawn_at: 2026-06-17T14:29:04.108271+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">23d 7h</td>
+</tr><tr style="opacity:0.55">
 <td>MSFT</td>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>1D</td>
@@ -619,21 +696,21 @@ function refreshDashboard(){
 <td>434.23</td>
 <td>444.71</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="531.4256" title="drawn_at: 2026-05-26T11:03:32.142686+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">22d 3h</td>
+<td class="orange" style="font-size:11px" data-sort="1090.8074" title="drawn_at: 2026-05-26T11:03:32.142686+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">45d 10h ⚠️</td>
 </tr><tr>
 <td>NVDA</td>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>1D</td>
-<td class="score-cell green" data-sort="71">71%</td>
+<td class="score-cell green" data-sort="78">78%</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="green" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">215.33</td>
-<td class="red">209.95</td>
-<td>219.64</td>
-<td>223.42</td>
-<td>228.72</td>
+<td class="green" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">210.96</td>
+<td class="red">200.21</td>
+<td>221.72</td>
+<td>228.89</td>
+<td>239.64</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="531.4256" title="drawn_at: 2026-05-26T11:03:32.142686+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">22d 3h</td>
-</tr><tr>
+<td class="gray" style="font-size:11px" data-sort="0.0026" title="drawn_at: 2026-07-10T21:51:49.409848+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">0m ago</td>
+</tr><tr style="opacity:0.55">
 <td>GOOGL</td>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>1D</td>
@@ -645,20 +722,7 @@ function refreshDashboard(){
 <td>397.09</td>
 <td>406.92</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="531.4256" title="drawn_at: 2026-05-26T11:03:32.142686+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">22d 3h</td>
-</tr><tr style="opacity:0.55">
-<td>META</td>
-<td><span class="badge badge-buy">BUY</span></td>
-<td>1D</td>
-<td class="score-cell orange" data-sort="50">50%</td>
-<td><span class="badge badge-watch">WATCH</span></td>
-<td class="orange" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">610.0</td>
-<td class="red">583.0</td>
-<td>626.0</td>
-<td>641.0</td>
-<td>660.0</td>
-<td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="orange" style="font-size:11px" data-sort="940.3914" title="drawn_at: 2026-05-09T10:05:35.371048+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">39d 4h ⚠️</td>
+<td class="orange" style="font-size:11px" data-sort="1090.8074" title="drawn_at: 2026-05-26T11:03:32.142686+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">45d 10h ⚠️</td>
 </tr><tr>
 <td>META</td>
 <td><span class="badge badge-sell">SELL</span></td>
@@ -671,8 +735,8 @@ function refreshDashboard(){
 <td>544.21</td>
 <td>514.64</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0001" title="drawn_at: 2026-06-17T14:29:04.108271+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">0m ago</td>
-</tr><tr>
+<td class="gray" style="font-size:11px" data-sort="559.3819" title="drawn_at: 2026-06-17T14:29:04.108271+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">23d 7h</td>
+</tr><tr style="opacity:0.55">
 <td>TSLA</td>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>1D</td>
@@ -684,21 +748,21 @@ function refreshDashboard(){
 <td>453.0</td>
 <td>470.0</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="591.7842" title="drawn_at: 2026-05-23T22:42:01.302741+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">24d 15h</td>
+<td class="orange" style="font-size:11px" data-sort="1151.1660" title="drawn_at: 2026-05-23T22:42:01.302741+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">47d 23h ⚠️</td>
 </tr><tr>
 <td>AMD</td>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>1D</td>
 <td class="score-cell green" data-sort="81">81%</td>
 <td><span class="badge badge-tradeable">ELITE</span></td>
-<td class="green" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">507.29</td>
-<td class="red">456.28</td>
-<td>558.31</td>
-<td>592.32</td>
-<td>643.33</td>
+<td class="green" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">557.89</td>
+<td class="red">503.54</td>
+<td>612.24</td>
+<td>648.46</td>
+<td>702.81</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0001" title="drawn_at: 2026-06-17T14:29:04.108271+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">0m ago</td>
-</tr><tr>
+<td class="gray" style="font-size:11px" data-sort="0.0026" title="drawn_at: 2026-07-10T21:51:49.409848+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">0m ago</td>
+</tr><tr style="opacity:0.55">
 <td>AVGO</td>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>1D</td>
@@ -710,46 +774,59 @@ function refreshDashboard(){
 <td>430.36</td>
 <td>439.98</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="531.4256" title="drawn_at: 2026-05-26T11:03:32.142686+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">22d 3h</td>
+<td class="orange" style="font-size:11px" data-sort="1090.8074" title="drawn_at: 2026-05-26T11:03:32.142686+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">45d 10h ⚠️</td>
 </tr><tr>
 <td>ARM</td>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>1D</td>
-<td class="score-cell green" data-sort="76">76%</td>
+<td class="score-cell green" data-sort="67">67%</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="green" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">396.34</td>
-<td class="red">345.0</td>
-<td>447.68</td>
-<td>481.91</td>
-<td>533.26</td>
+<td class="green" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">323.39</td>
+<td class="red">276.2</td>
+<td>370.58</td>
+<td>402.04</td>
+<td>449.23</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0001" title="drawn_at: 2026-06-17T14:29:04.108271+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">0m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0026" title="drawn_at: 2026-07-10T21:51:49.409848+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">0m ago</td>
+</tr><tr>
+<td>PLTR</td>
+<td><span class="badge badge-sell">SELL</span></td>
+<td>1D</td>
+<td class="score-cell green" data-sort="70">70%</td>
+<td><span class="badge badge-tradeable">TRADEABLE</span></td>
+<td class="green" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">126.79</td>
+<td class="red">137.16</td>
+<td>116.43</td>
+<td>109.52</td>
+<td>99.15</td>
+<td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
+<td class="gray" style="font-size:11px" data-sort="0.0026" title="drawn_at: 2026-07-10T21:51:49.409848+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">0m ago</td>
 </tr><tr>
 <td>CRWD</td>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>1D</td>
-<td class="score-cell green" data-sort="73">73%</td>
+<td class="score-cell green" data-sort="76">76%</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="green" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">663.46</td>
-<td class="red">646.9</td>
-<td>676.73</td>
-<td>689.63</td>
-<td>704.73</td>
+<td class="green" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">187.18</td>
+<td class="red">172.75</td>
+<td>201.61</td>
+<td>211.23</td>
+<td>225.66</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="531.4256" title="drawn_at: 2026-05-26T11:03:32.142686+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">22d 3h</td>
+<td class="gray" style="font-size:11px" data-sort="0.0026" title="drawn_at: 2026-07-10T21:51:49.409848+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">0m ago</td>
 </tr><tr>
 <td>NFLX</td>
 <td><span class="badge badge-sell">SELL</span></td>
 <td>1D</td>
-<td class="score-cell green" data-sort="86">86%</td>
+<td class="score-cell green" data-sort="81">81%</td>
 <td><span class="badge badge-tradeable">ELITE</span></td>
-<td class="green" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">78.72</td>
-<td class="red">82.09</td>
-<td>75.34</td>
-<td>73.09</td>
-<td>69.72</td>
+<td class="green" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">73.37</td>
+<td class="red">77.12</td>
+<td>69.62</td>
+<td>67.12</td>
+<td>63.37</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0001" title="drawn_at: 2026-06-17T14:29:04.108271+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">0m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0026" title="drawn_at: 2026-07-10T21:51:49.409848+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">0m ago</td>
 </tr><tr>
 <td>SPY</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -762,34 +839,34 @@ function refreshDashboard(){
 <td>774.43</td>
 <td>788.89</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0001" title="drawn_at: 2026-06-17T14:29:04.108271+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">0m ago</td>
+<td class="gray" style="font-size:11px" data-sort="559.3819" title="drawn_at: 2026-06-17T14:29:04.108271+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">23d 7h</td>
 </tr><tr>
 <td>QQQ</td>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>1D</td>
-<td class="score-cell green" data-sort="72">72%</td>
+<td class="score-cell green" data-sort="67">67%</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="green" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">729.86</td>
-<td class="red">706.45</td>
-<td>753.27</td>
-<td>768.88</td>
-<td>792.3</td>
+<td class="green" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">725.51</td>
+<td class="red">702.44</td>
+<td>748.58</td>
+<td>763.96</td>
+<td>787.03</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0001" title="drawn_at: 2026-06-17T14:29:04.108271+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">0m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0026" title="drawn_at: 2026-07-10T21:51:49.409848+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">0m ago</td>
 </tr><tr>
 <td>LLY</td>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>1D</td>
-<td class="score-cell green" data-sort="80">80%</td>
-<td><span class="badge badge-tradeable">ELITE</span></td>
-<td class="green" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">1065.0</td>
-<td class="red">1038.0</td>
-<td>1086.0</td>
-<td>1105.0</td>
-<td>1132.0</td>
+<td class="score-cell green" data-sort="69">69%</td>
+<td><span class="badge badge-tradeable">TRADEABLE</span></td>
+<td class="green" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">1188.58</td>
+<td class="red">1130.51</td>
+<td>1246.64</td>
+<td>1285.36</td>
+<td>1343.42</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="531.4256" title="drawn_at: 2026-05-26T11:03:32.142686+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">22d 3h</td>
-</tr><tr>
+<td class="gray" style="font-size:11px" data-sort="0.0026" title="drawn_at: 2026-07-10T21:51:49.409848+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">0m ago</td>
+</tr><tr style="opacity:0.55">
 <td>XOM</td>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>1D</td>
@@ -801,8 +878,8 @@ function refreshDashboard(){
 <td>160.74</td>
 <td>164.59</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="531.4256" title="drawn_at: 2026-05-26T11:03:32.142686+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">22d 3h</td>
-</tr><tr>
+<td class="orange" style="font-size:11px" data-sort="1090.8074" title="drawn_at: 2026-05-26T11:03:32.142686+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">45d 10h ⚠️</td>
+</tr><tr style="opacity:0.55">
 <td>COST</td>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>1D</td>
@@ -814,7 +891,20 @@ function refreshDashboard(){
 <td>1066.94</td>
 <td>1092.45</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="531.4256" title="drawn_at: 2026-05-26T11:03:32.142686+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">22d 3h</td>
+<td class="orange" style="font-size:11px" data-sort="1090.8074" title="drawn_at: 2026-05-26T11:03:32.142686+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">45d 10h ⚠️</td>
+</tr><tr>
+<td>COST</td>
+<td><span class="badge badge-sell">SELL</span></td>
+<td>1D</td>
+<td class="score-cell green" data-sort="78">78%</td>
+<td><span class="badge badge-tradeable">TRADEABLE</span></td>
+<td class="green" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">916.25</td>
+<td class="red">947.99</td>
+<td>884.51</td>
+<td>863.35</td>
+<td>831.61</td>
+<td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
+<td class="gray" style="font-size:11px" data-sort="0.0026" title="drawn_at: 2026-07-10T21:51:49.409848+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">0m ago</td>
 </tr><tr>
 <td>MRVL</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -827,13 +917,115 @@ function refreshDashboard(){
 <td>347.55</td>
 <td>388.87</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0001" title="drawn_at: 2026-06-17T14:29:04.108271+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">0m ago</td>
+<td class="gray" style="font-size:11px" data-sort="559.3819" title="drawn_at: 2026-06-17T14:29:04.108271+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">23d 7h</td>
+</tr></tbody></table>
+</div>
+<div class="section" style="border-left:4px solid #ff9500">
+<div class="section-title">₿ Crypto (14) — ALPHA-CRYPTO — Latest Scan</div>
+<div style="margin-bottom:8px;font-size:11px;color:#6e6e73"><strong>Formula:</strong> v11.1 ALPHA-CRYPTO (Crypto-native High-IC + Bybit funding fallback + zero-alpha guard)</div><div style="margin-bottom:8px;padding:8px 10px;background:#fff8e6;border-radius:6px;font-size:11px;color:#856404">Mode PAPER/analysis — scanner default TIDAK persist (auto_trader MT5 aktif). Setup di bawah = persist terakhir; jalankan scan_crypto_alpha_v11.py --persist untuk mengisi.</div>
+<div style="display:flex;gap:18px;font-size:12px;color:#6e6e73;margin-bottom:10px;flex-wrap:wrap">
+<div><strong>Symbols:</strong> 14</div>
+<div><strong style="color:#34c759">TRADEABLE:</strong> 0</div>
+<div><strong style="color:#856404">WATCH:</strong> 3</div>
+<div><strong style="color:#6e6e73">SKIP:</strong> 0</div>
+<div><strong>Last scan:</strong> 2026-06-07 23:13</div>
+</div>
+<table><thead><tr><th>Symbol</th><th>Side</th><th>TF</th><th>Score</th><th>Tier</th><th title="Entry trigger price — waiting price untuk auto-execute jika tier TRADEABLE">Entry Trigger</th><th>SL</th><th>TP1</th><th>TP2</th><th>TP3</th><th title="Estimated time TP3 reached based on TF">ETA TP3</th><th title="drawn_at per setup (waktu scanner terakhir update setup ini)">Updated</th></tr></thead>
+<tbody><tr style="opacity:0.55">
+<td>BTCUSD</td>
+<td><span class="badge badge-sell">SELL</span></td>
+<td>1D</td>
+<td class="score-cell green" data-sort="70">70%</td>
+<td><span class="badge badge-watch">WATCH</span></td>
+<td class="orange" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">75927.318</td>
+<td class="red">78797.902654</td>
+<td>72099.871794</td>
+<td>69229.287139</td>
+<td>66358.702485</td>
+<td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
+<td class="orange" style="font-size:11px" data-sort="1159.0283" title="drawn_at: 2026-05-23T14:50:16.882689+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">48d 7h ⚠️</td>
+</tr><tr style="opacity:0.55">
+<td>ETHUSD</td>
+<td><span class="badge badge-sell">SELL</span></td>
+<td>1D</td>
+<td class="score-cell orange" data-sort="57">57%</td>
+<td><span class="badge badge-watch">WATCH</span></td>
+<td class="orange" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">2091.054</td>
+<td class="red">2208.572645</td>
+<td>1934.362474</td>
+<td>1816.84383</td>
+<td>1699.325185</td>
+<td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
+<td class="orange" style="font-size:11px" data-sort="1117.6661" title="drawn_at: 2026-05-25T08:12:00.837074+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">46d 13h ⚠️</td>
+</tr><tr style="opacity:0.55">
+<td>ETHUSD</td>
+<td><span class="badge badge-buy">BUY</span></td>
+<td>1D</td>
+<td class="score-cell green" data-sort="60">60%</td>
+<td><span class="badge badge-watch">WATCH</span></td>
+<td class="orange" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">1626.164</td>
+<td class="red">1480.368173</td>
+<td>1820.558436</td>
+<td>1966.354263</td>
+<td>2112.15009</td>
+<td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
+<td class="orange" style="font-size:11px" data-sort="790.6426" title="drawn_at: 2026-06-07T23:13:25.384548+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">32d 22h ⚠️</td>
+</tr></tbody></table>
+</div>
+<div class="section" style="border-left:4px solid #af52de">
+<div class="section-title">💱 Forex (15) — ALPHA-FX — Latest Scan</div>
+<div style="margin-bottom:8px;font-size:11px;color:#6e6e73"><strong>Formula:</strong> v11.1 ALPHA-FX (Currency Strength Meter + carry sidecar fx_rates.json + zero-alpha guard)</div><div style="margin-bottom:8px;padding:8px 10px;background:#fff8e6;border-radius:6px;font-size:11px;color:#856404">Mode PAPER/analysis — scanner default TIDAK persist (auto_trader MT5 aktif). Setup di bawah = persist terakhir; jalankan scan_fx_alpha_v11.py --persist untuk mengisi.</div>
+<div style="display:flex;gap:18px;font-size:12px;color:#6e6e73;margin-bottom:10px;flex-wrap:wrap">
+<div><strong>Symbols:</strong> 15</div>
+<div><strong style="color:#34c759">TRADEABLE:</strong> 0</div>
+<div><strong style="color:#856404">WATCH:</strong> 1</div>
+<div><strong style="color:#6e6e73">SKIP:</strong> 0</div>
+<div><strong>Last scan:</strong> 2026-05-25 08:12</div>
+</div>
+<table><thead><tr><th>Symbol</th><th>Side</th><th>TF</th><th>Score</th><th>Tier</th><th title="Entry trigger price — waiting price untuk auto-execute jika tier TRADEABLE">Entry Trigger</th><th>SL</th><th>TP1</th><th>TP2</th><th>TP3</th><th title="Estimated time TP3 reached based on TF">ETA TP3</th><th title="drawn_at per setup (waktu scanner terakhir update setup ini)">Updated</th></tr></thead>
+<tbody><tr style="opacity:0.55">
+<td>XAUUSD</td>
+<td><span class="badge badge-sell">SELL</span></td>
+<td>1D</td>
+<td class="score-cell green" data-sort="60">60%</td>
+<td><span class="badge badge-watch">WATCH</span></td>
+<td class="orange" style="font-weight:600" title="Entry trigger — Buy/Sell Limit di harga ini untuk execute tradeable">4540.09</td>
+<td class="red">4703.668905</td>
+<td>4321.984793</td>
+<td>4158.405886</td>
+<td>3994.82698</td>
+<td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
+<td class="orange" style="font-size:11px" data-sort="1283.7917" title="drawn_at: 2026-05-18T10:04:28.658616+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">53d 11h ⚠️</td>
 </tr></tbody></table>
 </div>
 
 <div class="section"><div class="section-title">📊 Paper Portfolio - Open Positions</div>
 <table><thead><tr><th>ID</th><th>Symbol</th><th>Side</th><th>TF</th><th>Score</th><th>Entry</th><th>SL</th><th>TP1</th><th>TP2</th><th>TP3</th><th>Opened</th></tr></thead>
 <tbody><tr>
+<td>paper_004</td>
+<td>LINKUSDT</td>
+<td><span class="badge badge-buy">BUY</span></td>
+<td>H4</td>
+<td>60%</td>
+<td>9.72</td>
+<td class="red">9.3</td>
+<td>9.95</td>
+<td>10.05</td>
+<td>10.4</td>
+<td>2026-05-05T13:49</td>
+</tr><tr>
+<td>paper_005</td>
+<td>ETHUSD</td>
+<td><span class="badge badge-buy">BUY</span></td>
+<td>H2</td>
+<td>65%</td>
+<td>2318.0</td>
+<td class="red">2264.0</td>
+<td>2350.0</td>
+<td>2400.0</td>
+<td>2465.0</td>
+<td>2026-05-09T06:18</td>
+</tr><tr>
 <td>paper_006</td>
 <td>BMRI</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -858,229 +1050,249 @@ function refreshDashboard(){
 <td>2160.0</td>
 <td>2026-05-09T09:32</td>
 </tr><tr>
-<td>paper_050</td>
-<td>TLKM</td>
-<td><span class="badge badge-buy">BUY</span></td>
-<td>1D</td>
-<td>85%</td>
-<td>3080.0</td>
-<td class="red">3000.0</td>
-<td>3130.0</td>
-<td>3220.0</td>
-<td>3350.0</td>
-<td>2026-05-19T21:59</td>
-</tr><tr>
-<td>paper_051</td>
-<td>TLKM</td>
-<td><span class="badge badge-buy">BUY</span></td>
-<td>H1</td>
-<td>82%</td>
-<td>3080.0</td>
-<td class="red">3000.0</td>
-<td>3130.0</td>
-<td>3220.0</td>
-<td>3350.0</td>
-<td>2026-05-19T21:59</td>
-</tr><tr>
-<td>paper_052</td>
-<td>ASII</td>
-<td><span class="badge badge-buy">BUY</span></td>
-<td>H1</td>
-<td>71%</td>
-<td>5950.0</td>
-<td class="red">5775.0</td>
-<td>6025.0</td>
-<td>6100.0</td>
-<td>6250.0</td>
-<td>2026-05-19T21:59</td>
-</tr><tr>
-<td>paper_053</td>
-<td>BMRI</td>
-<td><span class="badge badge-buy">BUY</span></td>
-<td>H1</td>
-<td>61%</td>
-<td>4130.0</td>
-<td class="red">4050.0</td>
-<td>4200.0</td>
-<td>4260.0</td>
-<td>4400.0</td>
-<td>2026-05-19T21:59</td>
-</tr><tr>
-<td>paper_054</td>
-<td>MSFT</td>
+<td>paper_008</td>
+<td>XAUUSD</td>
 <td><span class="badge badge-sell">SELL</span></td>
-<td>1D</td>
-<td>74%</td>
-<td>417.42</td>
-<td class="red">433.0</td>
-<td>405.0</td>
-<td>395.0</td>
-<td>373.0</td>
-<td>2026-05-19T22:34</td>
+<td>H4</td>
+<td>60%</td>
+<td>4725.0</td>
+<td class="red">4770.0</td>
+<td>4680.0</td>
+<td>4635.0</td>
+<td>4568.0</td>
+<td>2026-05-09T09:44</td>
 </tr><tr>
-<td>paper_055</td>
-<td>GOOGL</td>
+<td>paper_009</td>
+<td>SOLUSD</td>
+<td><span class="badge badge-buy">BUY</span></td>
+<td>H1</td>
+<td>95%</td>
+<td>93.156</td>
+<td class="red">92.071174</td>
+<td>94.602435</td>
+<td>95.68726</td>
+<td>96.772085</td>
+<td>2026-05-09T10:32</td>
+</tr><tr>
+<td>paper_010</td>
+<td>SOLUSD</td>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>H4</td>
-<td>62%</td>
-<td>387.74</td>
-<td class="red">383.0</td>
-<td>396.0</td>
-<td>402.0</td>
-<td>409.0</td>
-<td>2026-05-19T22:34</td>
+<td>87%</td>
+<td>93.186</td>
+<td class="red">91.127106</td>
+<td>95.931192</td>
+<td>97.990086</td>
+<td>100.04898</td>
+<td>2026-05-09T10:32</td>
 </tr><tr>
-<td>paper_061</td>
-<td>TSLA</td>
+<td>paper_011</td>
+<td>XRPUSDT</td>
 <td><span class="badge badge-buy">BUY</span></td>
-<td>1D</td>
-<td>61%</td>
-<td>426.0</td>
-<td class="red">405.0</td>
-<td>445.0</td>
-<td>453.0</td>
-<td>470.0</td>
-<td>2026-05-23T22:42</td>
+<td>H1</td>
+<td>77%</td>
+<td>1.41084</td>
+<td class="red">1.399351</td>
+<td>1.426159</td>
+<td>1.43765</td>
+<td>1.44914</td>
+<td>2026-05-09T10:32</td>
 </tr><tr>
-<td>paper_064</td>
-<td>MAPI</td>
+<td>paper_012</td>
+<td>XRPUSDT</td>
 <td><span class="badge badge-buy">BUY</span></td>
-<td>1D</td>
-<td>60%</td>
-<td>1495.0</td>
-<td class="red">1458.0</td>
-<td>1525.0</td>
-<td>1551.0</td>
-<td>1588.0</td>
-<td>2026-05-26T11:03</td>
+<td>H4</td>
+<td>77%</td>
+<td>1.41894</td>
+<td class="red">1.397912</td>
+<td>1.446977</td>
+<td>1.468006</td>
+<td>1.489035</td>
+<td>2026-05-09T10:32</td>
 </tr><tr>
-<td>paper_065</td>
-<td>XOM</td>
+<td>paper_013</td>
+<td>BNBUSDT</td>
 <td><span class="badge badge-buy">BUY</span></td>
-<td>1D</td>
-<td>76%</td>
-<td>154.92</td>
-<td class="red">151.05</td>
-<td>158.02</td>
-<td>160.74</td>
-<td>164.59</td>
-<td>2026-05-26T11:03</td>
+<td>H4</td>
+<td>87%</td>
+<td>648.825</td>
+<td class="red">638.932009</td>
+<td>662.015654</td>
+<td>671.908645</td>
+<td>681.801635</td>
+<td>2026-05-09T10:32</td>
 </tr><tr>
-<td>paper_066</td>
-<td>AAPL</td>
+<td>paper_014</td>
+<td>ADAUSDT</td>
 <td><span class="badge badge-buy">BUY</span></td>
-<td>1D</td>
-<td>73%</td>
-<td>308.82</td>
-<td class="red">301.1</td>
-<td>315.0</td>
-<td>320.49</td>
-<td>328.13</td>
-<td>2026-05-26T11:03</td>
+<td>H4</td>
+<td>87%</td>
+<td>0.27239</td>
+<td class="red">0.265796</td>
+<td>0.281182</td>
+<td>0.287776</td>
+<td>0.29437</td>
+<td>2026-05-09T10:32</td>
 </tr><tr>
-<td>paper_067</td>
-<td>CRWD</td>
+<td>paper_015</td>
+<td>AVAXUSDT</td>
 <td><span class="badge badge-buy">BUY</span></td>
-<td>1D</td>
-<td>73%</td>
-<td>663.46</td>
-<td class="red">646.9</td>
-<td>676.73</td>
-<td>689.63</td>
-<td>704.73</td>
-<td>2026-05-26T11:03</td>
+<td>H4</td>
+<td>77%</td>
+<td>9.85</td>
+<td class="red">9.614022</td>
+<td>10.164638</td>
+<td>10.400616</td>
+<td>10.636595</td>
+<td>2026-05-09T10:32</td>
 </tr><tr>
-<td>paper_068</td>
-<td>NVDA</td>
+<td>paper_016</td>
+<td>DOGEUSDT</td>
 <td><span class="badge badge-buy">BUY</span></td>
-<td>1D</td>
-<td>71%</td>
-<td>215.33</td>
-<td class="red">209.95</td>
-<td>219.64</td>
-<td>223.42</td>
-<td>228.72</td>
-<td>2026-05-26T11:03</td>
+<td>H4</td>
+<td>79%</td>
+<td>0.10958</td>
+<td class="red">0.106851</td>
+<td>0.113218</td>
+<td>0.115946</td>
+<td>0.118675</td>
+<td>2026-05-09T10:32</td>
 </tr><tr>
-<td>paper_069</td>
-<td>ARM</td>
+<td>paper_017</td>
+<td>ATOMUSDT</td>
 <td><span class="badge badge-buy">BUY</span></td>
-<td>1D</td>
-<td>68%</td>
-<td>306.51</td>
-<td class="red">298.85</td>
-<td>312.65</td>
-<td>318.2</td>
-<td>325.68</td>
-<td>2026-05-26T11:03</td>
+<td>H4</td>
+<td>77%</td>
+<td>1.952</td>
+<td class="red">1.900484</td>
+<td>2.020688</td>
+<td>2.072204</td>
+<td>2.12372</td>
+<td>2026-05-09T10:32</td>
 </tr><tr>
-<td>paper_070</td>
-<td>COST</td>
+<td>paper_018</td>
+<td>LINKUSDT</td>
 <td><span class="badge badge-buy">BUY</span></td>
-<td>1D</td>
-<td>67%</td>
-<td>1028.24</td>
-<td class="red">1002.53</td>
-<td>1048.85</td>
-<td>1066.94</td>
-<td>1092.45</td>
-<td>2026-05-26T11:03</td>
+<td>H1</td>
+<td>87%</td>
+<td>9.6849</td>
+<td class="red">9.550639</td>
+<td>9.863915</td>
+<td>9.998178</td>
+<td>10.13244</td>
+<td>2026-05-09T10:32</td>
 </tr><tr>
-<td>paper_071</td>
-<td>GOOGL</td>
+<td>paper_019</td>
+<td>DOTUSDT</td>
 <td><span class="badge badge-buy">BUY</span></td>
-<td>1D</td>
-<td>64%</td>
-<td>382.97</td>
-<td class="red">373.4</td>
-<td>390.63</td>
-<td>397.09</td>
-<td>406.92</td>
-<td>2026-05-26T11:03</td>
+<td>H4</td>
+<td>87%</td>
+<td>1.348</td>
+<td class="red">1.309301</td>
+<td>1.399598</td>
+<td>1.438296</td>
+<td>1.476995</td>
+<td>2026-05-09T10:32</td>
 </tr><tr>
-<td>paper_072</td>
-<td>AMD</td>
+<td>paper_020</td>
+<td>LTCUSDT</td>
 <td><span class="badge badge-buy">BUY</span></td>
-<td>1D</td>
-<td>64%</td>
-<td>467.51</td>
-<td class="red">455.82</td>
-<td>477.06</td>
-<td>485.82</td>
-<td>496.69</td>
-<td>2026-05-26T11:03</td>
+<td>H4</td>
+<td>77%</td>
+<td>58.165</td>
+<td class="red">57.111671</td>
+<td>59.569438</td>
+<td>60.622766</td>
+<td>61.676095</td>
+<td>2026-05-09T10:32</td>
 </tr><tr>
-<td>paper_073</td>
-<td>AVGO</td>
+<td>paper_021</td>
+<td>NEARUSDT</td>
 <td><span class="badge badge-buy">BUY</span></td>
-<td>1D</td>
-<td>64%</td>
-<td>414.14</td>
-<td class="red">403.79</td>
-<td>422.43</td>
-<td>430.36</td>
-<td>439.98</td>
-<td>2026-05-26T11:03</td>
+<td>H4</td>
+<td>87%</td>
+<td>1.565</td>
+<td class="red">1.499388</td>
+<td>1.652483</td>
+<td>1.718093</td>
+<td>1.783705</td>
+<td>2026-05-09T10:32</td>
 </tr><tr>
-<td>paper_074</td>
-<td>QQQ</td>
+<td>paper_022</td>
+<td>BTCUSD</td>
+<td><span class="badge badge-sell">SELL</span></td>
+<td>M30</td>
+<td>79%</td>
+<td>80268.959</td>
+<td class="red">80644.979277</td>
+<td>79767.598631</td>
+<td>79391.578353</td>
+<td>79015.558075</td>
+<td>2026-05-13T13:09</td>
+</tr><tr>
+<td>paper_023</td>
+<td>BNBUSDT</td>
 <td><span class="badge badge-buy">BUY</span></td>
-<td>1D</td>
-<td>64%</td>
-<td>717.54</td>
-<td class="red">699.6</td>
-<td>731.93</td>
-<td>745.37</td>
-<td>762.43</td>
-<td>2026-05-26T11:03</td>
+<td>H1</td>
+<td>79%</td>
+<td>674.745</td>
+<td class="red">667.710327</td>
+<td>684.124564</td>
+<td>691.159237</td>
+<td>698.19391</td>
+<td>2026-05-13T13:09</td>
 </tr></tbody></table></div>
 
 <div class="section"><div class="section-title">Recent Signals (last 25 actionable)</div>
 <table><thead><tr><th>Date</th><th>Symbol</th><th>TF</th><th>Side</th><th>Entry</th><th>SL</th><th>TP1</th><th>Score</th><th>Outcome</th><th>R</th></tr></thead>
-<tbody><tr><td colspan="10" class="empty">No actionable signals yet</td></tr></tbody></table></div>
+<tbody><tr style="background:#e8f5e9">
+<td>2026-05-04</td>
+<td>LINKUSDr</td>
+<td>H4</td>
+<td><span class="badge badge-buy">BUY</span></td>
+<td>9.36</td>
+<td class="red">9.0</td>
+<td>9.84</td>
+<td class="score-cell orange">51%</td>
+<td><span class="badge badge-tp3">TP3_HIT_USER_EXITED_EARLY</span></td>
+<td class="green" style="font-weight:600">+2.00R</td>
+</tr><tr style="background:#e8f5e9">
+<td>2026-05-04</td>
+<td>XRPUSDr</td>
+<td>H4</td>
+<td><span class="badge badge-buy">BUY</span></td>
+<td>1.4157</td>
+<td class="red">1.375</td>
+<td>1.45</td>
+<td class="score-cell orange">55%</td>
+<td><span class="badge badge-tp3">TP3_HIT_USER_EXITED_EARLY</span></td>
+<td class="green" style="font-weight:600">+1.62R</td>
+</tr><tr style="background:#e8f5e9">
+<td>2026-05-04</td>
+<td>BTCUSDr</td>
+<td>H4</td>
+<td><span class="badge badge-buy">BUY</span></td>
+<td>78705.37</td>
+<td class="red">78500</td>
+<td>78850</td>
+<td class="score-cell green">70%</td>
+<td><span class="badge badge-tp3">HIT_TP3_MANUAL</span></td>
+<td class="green" style="font-weight:600">+2.50R</td>
+</tr><tr>
+<td>2026-05-03</td>
+<td>BTCUSDr</td>
+<td>H1</td>
+<td><span class="badge badge-buy">BUY</span></td>
+<td>78366.15</td>
+<td class="red">77800</td>
+<td>78600</td>
+<td class="score-cell green">62%</td>
+<td><span class="badge badge-tp1">TP1_HIT_AUTO</span></td>
+<td class="green" style="font-weight:600">+0.50R</td>
+</tr></tbody></table></div>
 
 <div style="text-align:center;padding:24px 0;color:#6e6e73;font-size:11px">
-Quant Stock System v7.0 · 🇮🇩 Indonesia Syariah (30) + 🇺🇸 Amerika (20) · Formula v10.1 Unified-Additive · Broker AJAIB · auto-rebuild setiap scan
+Alpha System v8.0 · 🇮🇩 IDX Syariah (30) + 🇺🇸 US (20) + ₿ Crypto (14) + 💱 Forex (15) + 🥇 XAU-M1 · Formula v11.1 High-IC Alpha (Fable-5 audit) · Broker AJAIB (saham) / HFX MT5 (fx-crypto) · auto-rebuild setiap scan
 </div>
 
 </div>
