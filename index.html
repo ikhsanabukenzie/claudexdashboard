@@ -43,7 +43,7 @@ tbody tr:hover{background:#fafafa}
 
 <div class="header">
 <div><h1>📊 Alpha Dashboard v8.0 — 🇮🇩 IDX + 🇺🇸 US + ₿ Crypto + 💱 FX</h1>
-<div class="meta">Auto-generated 2026-07-24 11:37:13 WIB · 🔄 Auto-rebuild: setiap scanner selesai + tiap 10 menit · Manual: Run Now <code>dashboard-refresh</code></div></div>
+<div class="meta">Auto-generated 2026-07-24 11:41:08 WIB · 🔄 Auto-rebuild: setiap scanner selesai + tiap 10 menit · Manual: Run Now <code>dashboard-refresh</code></div></div>
 <div style="display:flex;align-items:center;gap:10px">
 <button onclick="refreshDashboard()" id="btn-refresh" style="background:#007aff;color:white;border:none;padding:8px 18px;border-radius:12px;font-size:13px;font-weight:600;cursor:pointer;display:flex;align-items:center;gap:6px" title="Reload halaman untuk tampilkan data terbaru.&#10;Untuk regenerasi data: jalankan refresh.bat atau Run Now dashboard-refresh">
   🔄 Refresh
@@ -143,21 +143,31 @@ Direction-relative penuh · Alpha-Confirm guard (ELITE wajib ≥2 core positif) 
 </div>
 
 
-<div class="section" style="border-left:4px solid #34c759">
-<div class="section-title">🟢 Position Guardian — Watchdog Posisi
+<div class="section" style="border-left:4px solid #ff9500">
+<div class="section-title">🟡 Position Guardian — Watchdog Posisi
   <div style="font-size:11px;font-weight:400;color:#6e6e73;margin-top:4px">
     Memantau SEMUA posisi terbuka (termasuk MANUAL) · deteksi TANPA SL + margin level · warn-only.
-    Cek terakhir: 2026-07-24 11:34 · <code>tools/position_guardian.py</code>
+    Cek terakhir: 2026-07-24 11:37 · <code>tools/position_guardian.py</code>
   </div>
 </div>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:12px;margin-bottom:6px">
-<div class="card" style="padding:12px"><div class="card-label">Status</div><div class="card-value" style="font-size:18px;color:#34c759">🟢 OK</div></div>
-<div class="card" style="padding:12px"><div class="card-label">Margin Level</div><div class="card-value" style="font-size:18px">n/a (tak ada posisi)</div><div class="card-sub">stop-out broker ~50%</div></div>
-<div class="card" style="padding:12px"><div class="card-label">Posisi tanpa SL</div><div class="card-value green" style="font-size:18px">0</div></div>
-<div class="card" style="padding:12px"><div class="card-label">Equity</div><div class="card-value" style="font-size:18px">221,821 IDR</div></div>
+<div class="card" style="padding:12px"><div class="card-label">Status</div><div class="card-value" style="font-size:18px;color:#ff9500">🟡 WARN</div></div>
+<div class="card" style="padding:12px"><div class="card-label">Margin Level</div><div class="card-value" style="font-size:18px">2484%</div><div class="card-sub">stop-out broker ~50%</div></div>
+<div class="card" style="padding:12px"><div class="card-label">Posisi tanpa SL</div><div class="card-value red" style="font-size:18px">1</div></div>
+<div class="card" style="padding:12px"><div class="card-label">Equity</div><div class="card-value" style="font-size:18px">222,576 IDR</div></div>
 </div>
-
-<div style="padding:14px;text-align:center;color:#6e6e73;font-size:12px">Tidak ada posisi terbuka saat cek terakhir.</div>
+<ul style="margin:8px 0 0 18px;font-size:12px;color:#b3350a"><li style="margin:2px 0">USDCHFb BUY 0.01 (MANUAL) TANPA SL — rawan lari ke stop-out</li></ul>
+<table style="margin-top:10px"><thead><tr><th>Symbol</th><th>Side</th><th>Lot</th><th>Source</th><th>Entry → Now</th><th>SL</th><th>TP</th><th>P/L</th></tr></thead>
+<tbody><tr>
+<td>USDCHFb</td>
+<td><span class="badge badge-buy">BUY</span></td>
+<td>0.01</td>
+<td>MANUAL</td>
+<td style="font-family:monospace">0.81705 → 0.81713</td>
+<td><span class="red" style="font-weight:700">TANPA SL ⚠</span></td>
+<td>-</td>
+<td class="green" style="font-weight:600">+1,755</td>
+</tr></tbody></table>
 <div style="margin-top:8px;font-size:11px;color:#6e6e73">
 Warn-only: guardian TIDAK menutup posisi otomatis. Untuk pasang SL protektif ke posisi tanpa SL: jalankan <code>position_guardian.py --attach-sl</code>. Ambang: margin &lt;200% BAHAYA, &lt;400% waspada.
 </div>
@@ -167,12 +177,12 @@ Warn-only: guardian TIDAK menutup posisi otomatis. Untuk pasang SL protektif ke 
 <div class="section" style="border-left:4px solid #f7931a">
 <div class="section-title">💹 Riwayat Trade MT5 — Live Account (14 hari)
   <div style="font-size:11px;font-weight:400;color:#6e6e73;margin-top:4px">
-    141203403 @ HFMarketsGlobal-Live9 · Sumber: <code>dashboard/mt5_history.json</code> (refresh: <code>tools/mt5_history_export.py</code>) · Exported: 2026-07-24 11:37 · Jam WIB (server+4)
+    141203403 @ HFMarketsGlobal-Live9 · Sumber: <code>dashboard/mt5_history.json</code> (refresh: <code>tools/mt5_history_export.py</code>) · Exported: 2026-07-24 11:41 · Jam WIB (server+4)
   </div>
 </div>
 <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:12px;margin-bottom:14px">
 <div class="card" style="padding:12px"><div class="card-label">Balance</div><div class="card-value" style="font-size:18px">220,821 IDR</div></div>
-<div class="card" style="padding:12px"><div class="card-label">Equity</div><div class="card-value" style="font-size:18px">221,041 IDR</div></div>
+<div class="card" style="padding:12px"><div class="card-label">Equity</div><div class="card-value" style="font-size:18px">221,479 IDR</div></div>
 <div class="card" style="padding:12px"><div class="card-label">Net P/L 14d (closed)</div><div class="card-value red" style="font-size:18px">-883,912 IDR</div></div>
 <div class="card" style="padding:12px"><div class="card-label">Trades 14d</div><div class="card-value" style="font-size:18px">27W / 19L</div><div class="card-sub">win rate 59%</div></div>
 </div>
@@ -197,10 +207,10 @@ Perbaikan berdampak ada di <strong>SL wajib + sizing</strong>, bukan skor alpha.
 <td><span class="badge badge-buy">BUY</span></td>
 <td>0.01</td>
 <td><span style="padding:2px 8px;background:#e5f1ff;color:#0a5fd7;border-radius:4px;font-size:10px;font-weight:700;white-space:nowrap">MANUAL</span></td>
-<td style="font-family:monospace">0.81705 → 0.81706</td>
-<td class="red">-</td>
-<td>-</td>
-<td class="green" style="font-weight:600">+219</td>
+<td style="font-family:monospace">0.81705 → 0.81708</td>
+<td class="red">0.80946</td>
+<td>0.83779</td>
+<td class="green" style="font-weight:600">+658</td>
 </tr></tbody></table>
 <table><thead><tr><th>Open (WIB)</th><th>Close (WIB)</th><th>Symbol</th><th>Side</th><th>Lot</th><th>Source</th><th>Entry → Exit</th><th title="Cara posisi ditutup: TP/SL (by design), SO = margin stop-out (dipaksa broker), manual = close tangan">Via</th><th>Durasi</th><th style="text-align:right">Net P/L (IDR)</th></tr></thead>
 <tbody><tr>
@@ -541,7 +551,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 
 <div class="section"><div class="section-title">Active Setups & Pending Zones (combined)
   <div style="font-size:11px;font-weight:400;color:#6e6e73;margin-top:4px">
-    Sumber: <code>harmonic-prz-scan/state.json</code> (semua market digabung). Dashboard di-build: <strong>2026-07-24 11:37:13 WIB</strong>.
+    Sumber: <code>harmonic-prz-scan/state.json</code> (semua market digabung). Dashboard di-build: <strong>2026-07-24 11:41:08 WIB</strong>.
     Kolom <strong>Updated</strong> = drawn_at per setup. Tanda ⚠️ STALE = lebih lama dari batas freshness per TF.
   </div>
 </div>
@@ -558,7 +568,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="80">80%</td>
 <td>v11.0 AlphaFX BEAR a=+9</td>
 <td><span class="badge badge-tradeable">ELITE</span></td>
-<td class="gray" style="font-size:11px" data-sort="99.7831" title="drawn_at: 2026-07-19T23:50:14.006581+00:00">4d 3h</td>
+<td class="gray" style="font-size:11px" data-sort="99.8486" title="drawn_at: 2026-07-19T23:50:14.006581+00:00">4d 3h</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>GBPUSD</td>
@@ -571,7 +581,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="70">70%</td>
 <td>v11.0 AlphaFX BULL a=+2</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="19.7366" title="drawn_at: 2026-07-23T07:53:01.369543+00:00">19.7h ago</td>
+<td class="gray" style="font-size:11px" data-sort="19.8021" title="drawn_at: 2026-07-23T07:53:01.369543+00:00">19.8h ago</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>BTCUSD</td>
@@ -584,7 +594,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="82">82%</td>
 <td>v11.0 AlphaCrypto BULL a=+22</td>
 <td><span class="badge badge-tradeable">ELITE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0273" title="drawn_at: 2026-07-24T03:35:34.650770+00:00">1m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0929" title="drawn_at: 2026-07-24T03:35:34.650770+00:00">5m ago</td>
 </tr><tr>
 <td><span class="badge badge-sell">SELL</span></td>
 <td>EURUSD</td>
@@ -597,7 +607,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="72">72%</td>
 <td>v11.0 AlphaFX BEAR a=+10</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="99.7831" title="drawn_at: 2026-07-19T23:50:14.006581+00:00">4d 3h</td>
+<td class="gray" style="font-size:11px" data-sort="99.8486" title="drawn_at: 2026-07-19T23:50:14.006581+00:00">4d 3h</td>
 </tr><tr>
 <td><span class="badge badge-sell">SELL</span></td>
 <td>ETHUSD</td>
@@ -610,7 +620,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell orange" data-sort="57">57%</td>
 <td>MT5-engine v10.0 (STRONG BEARI</td>
 <td><span class="badge badge-watch">WATCH</span></td>
-<td class="orange" style="font-size:11px" data-sort="1435.4201" title="drawn_at: 2026-05-25T08:12:00.837074+00:00">59d 19h ⚠️ STALE</td>
+<td class="orange" style="font-size:11px" data-sort="1435.4856" title="drawn_at: 2026-05-25T08:12:00.837074+00:00">59d 19h ⚠️ STALE</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>ETHUSD</td>
@@ -623,7 +633,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="78">78%</td>
 <td>v11.0 AlphaCrypto BULL a=+18</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0273" title="drawn_at: 2026-07-24T03:35:34.650770+00:00">1m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0929" title="drawn_at: 2026-07-24T03:35:34.650770+00:00">5m ago</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>SOLUSD</td>
@@ -636,7 +646,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="77">77%</td>
 <td>v11.0 AlphaCrypto BULL a=+19</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="149.8392" title="drawn_at: 2026-07-17T21:46:51.927279+00:00">6d 5h</td>
+<td class="gray" style="font-size:11px" data-sort="149.9047" title="drawn_at: 2026-07-17T21:46:51.927279+00:00">6d 5h</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>ANTM</td>
@@ -649,7 +659,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="71">71%</td>
 <td>v11.0 Alpha Stage 1 (basing) a</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="99.7975" title="drawn_at: 2026-07-19T23:49:21.941998+00:00">4d 3h</td>
+<td class="gray" style="font-size:11px" data-sort="99.8631" title="drawn_at: 2026-07-19T23:49:21.941998+00:00">4d 3h</td>
 </tr><tr>
 <td><span class="badge badge-sell">SELL</span></td>
 <td>XRPUSDT</td>
@@ -662,7 +672,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="70">70%</td>
 <td>v11.0 AlphaCrypto BEAR a=+10</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0273" title="drawn_at: 2026-07-24T03:35:34.650770+00:00">1m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0929" title="drawn_at: 2026-07-24T03:35:34.650770+00:00">5m ago</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>LINKUSDT</td>
@@ -675,7 +685,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="87">87%</td>
 <td>v11.0 AlphaCrypto BULL a=+27</td>
 <td><span class="badge badge-tradeable">ELITE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0273" title="drawn_at: 2026-07-24T03:35:34.650770+00:00">1m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0929" title="drawn_at: 2026-07-24T03:35:34.650770+00:00">5m ago</td>
 </tr><tr>
 <td><span class="badge badge-sell">SELL</span></td>
 <td>BNBUSDT</td>
@@ -688,7 +698,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="86">86%</td>
 <td>v11.0 AlphaCrypto BEAR a=+18</td>
 <td><span class="badge badge-tradeable">ELITE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0273" title="drawn_at: 2026-07-24T03:35:34.650770+00:00">1m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0929" title="drawn_at: 2026-07-24T03:35:34.650770+00:00">5m ago</td>
 </tr><tr>
 <td><span class="badge badge-sell">SELL</span></td>
 <td>ADAUSDT</td>
@@ -701,7 +711,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="68">68%</td>
 <td>v11.0 AlphaCrypto BEAR a=+14</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="173.3047" title="drawn_at: 2026-07-16T22:18:56.130546+00:00">7d 5h</td>
+<td class="gray" style="font-size:11px" data-sort="173.3702" title="drawn_at: 2026-07-16T22:18:56.130546+00:00">7d 5h</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>ADAUSDT</td>
@@ -714,7 +724,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="66">66%</td>
 <td>v11.0 AlphaCrypto BULL a=+8</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0273" title="drawn_at: 2026-07-24T03:35:34.650770+00:00">1m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0929" title="drawn_at: 2026-07-24T03:35:34.650770+00:00">5m ago</td>
 </tr><tr>
 <td><span class="badge badge-sell">SELL</span></td>
 <td>MSFT</td>
@@ -727,7 +737,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="78">78%</td>
 <td>v11.0 AlphaUS BEAR a=+22 inver</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="orange" style="font-size:11px" data-sort="877.1358" title="drawn_at: 2026-06-17T14:29:04.108271+00:00">36d 13h ⚠️ STALE</td>
+<td class="orange" style="font-size:11px" data-sort="877.2013" title="drawn_at: 2026-06-17T14:29:04.108271+00:00">36d 13h ⚠️ STALE</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>MSFT</td>
@@ -740,7 +750,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="60">60%</td>
 <td>v10.4 NEUTRAL W1-Contra Vol-Lo</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="orange" style="font-size:11px" data-sort="1408.5614" title="drawn_at: 2026-05-26T11:03:32.142686+00:00">58d 16h ⚠️ STALE</td>
+<td class="orange" style="font-size:11px" data-sort="1408.6269" title="drawn_at: 2026-05-26T11:03:32.142686+00:00">58d 16h ⚠️ STALE</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>META</td>
@@ -753,7 +763,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="71">71%</td>
 <td>v11.0 AlphaUS BULL a=+12 Miner</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="19.5584" title="drawn_at: 2026-07-23T08:03:42.869498+00:00">19.6h ago</td>
+<td class="gray" style="font-size:11px" data-sort="19.6239" title="drawn_at: 2026-07-23T08:03:42.869498+00:00">19.6h ago</td>
 </tr><tr>
 <td><span class="badge badge-sell">SELL</span></td>
 <td>META</td>
@@ -766,7 +776,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="75">75%</td>
 <td>v11.0 AlphaUS BEAR a=+19 inver</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="orange" style="font-size:11px" data-sort="877.1358" title="drawn_at: 2026-06-17T14:29:04.108271+00:00">36d 13h ⚠️ STALE</td>
+<td class="orange" style="font-size:11px" data-sort="877.2013" title="drawn_at: 2026-06-17T14:29:04.108271+00:00">36d 13h ⚠️ STALE</td>
 </tr><tr>
 <td><span class="badge badge-sell">SELL</span></td>
 <td>AVAXUSDT</td>
@@ -779,7 +789,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="80">80%</td>
 <td>v11.0 AlphaCrypto BEAR a=+18</td>
 <td><span class="badge badge-tradeable">ELITE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0273" title="drawn_at: 2026-07-24T03:35:34.650770+00:00">1m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0929" title="drawn_at: 2026-07-24T03:35:34.650770+00:00">5m ago</td>
 </tr><tr>
 <td><span class="badge badge-sell">SELL</span></td>
 <td>DOGEUSDT</td>
@@ -792,7 +802,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="92">92%</td>
 <td>v11.0 AlphaCrypto BEAR a=+26</td>
 <td><span class="badge badge-tradeable">ELITE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0273" title="drawn_at: 2026-07-24T03:35:34.650770+00:00">1m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0929" title="drawn_at: 2026-07-24T03:35:34.650770+00:00">5m ago</td>
 </tr><tr>
 <td><span class="badge badge-sell">SELL</span></td>
 <td>ATOMUSDT</td>
@@ -805,7 +815,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="83">83%</td>
 <td>v11.0 AlphaCrypto BEAR a=+23</td>
 <td><span class="badge badge-tradeable">ELITE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0273" title="drawn_at: 2026-07-24T03:35:34.650770+00:00">1m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0929" title="drawn_at: 2026-07-24T03:35:34.650770+00:00">5m ago</td>
 </tr><tr>
 <td><span class="badge badge-sell">SELL</span></td>
 <td>DOTUSDT</td>
@@ -818,7 +828,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="88">88%</td>
 <td>v11.0 AlphaCrypto BEAR a=+23</td>
 <td><span class="badge badge-tradeable">ELITE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0273" title="drawn_at: 2026-07-24T03:35:34.650770+00:00">1m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0929" title="drawn_at: 2026-07-24T03:35:34.650770+00:00">5m ago</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>USDJPY</td>
@@ -831,7 +841,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="90">90%</td>
 <td>v11.5 AlphaFX BULL a=+22</td>
 <td><span class="badge badge-tradeable">ELITE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0724" title="drawn_at: 2026-07-24T03:32:52.437331+00:00">4m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.1379" title="drawn_at: 2026-07-24T03:32:52.437331+00:00">8m ago</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>EURJPY</td>
@@ -844,7 +854,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="74">74%</td>
 <td>v11.5 AlphaFX BULL a=+19</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0724" title="drawn_at: 2026-07-24T03:32:52.437331+00:00">4m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.1379" title="drawn_at: 2026-07-24T03:32:52.437331+00:00">8m ago</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>GBPJPY</td>
@@ -857,7 +867,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="79">79%</td>
 <td>v11.5 AlphaFX BULL a=+22</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0724" title="drawn_at: 2026-07-24T03:32:52.437331+00:00">4m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.1379" title="drawn_at: 2026-07-24T03:32:52.437331+00:00">8m ago</td>
 </tr><tr>
 <td><span class="badge badge-sell">SELL</span></td>
 <td>EURGBP</td>
@@ -870,7 +880,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="73">73%</td>
 <td>v11.5 AlphaFX BEAR a=+12</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0724" title="drawn_at: 2026-07-24T03:32:52.437331+00:00">4m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.1379" title="drawn_at: 2026-07-24T03:32:52.437331+00:00">8m ago</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>USDCHF</td>
@@ -883,7 +893,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="93">93%</td>
 <td>v11.5 AlphaFX BULL a=+26</td>
 <td><span class="badge badge-tradeable">ELITE</span></td>
-<td class="gray" style="font-size:11px" data-sort="0.0724" title="drawn_at: 2026-07-24T03:32:52.437331+00:00">4m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.1379" title="drawn_at: 2026-07-24T03:32:52.437331+00:00">8m ago</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>NZDUSD</td>
@@ -896,7 +906,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="71">71%</td>
 <td>v11.0 AlphaFX BULL a=+15</td>
 <td><span class="badge badge-tradeable">TRADEABLE</span></td>
-<td class="gray" style="font-size:11px" data-sort="19.7366" title="drawn_at: 2026-07-23T07:53:01.369543+00:00">19.7h ago</td>
+<td class="gray" style="font-size:11px" data-sort="19.8021" title="drawn_at: 2026-07-23T07:53:01.369543+00:00">19.8h ago</td>
 </tr><tr>
 <td><span class="badge badge-sell">SELL</span></td>
 <td>XAGUSD</td>
@@ -909,7 +919,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="81">81%</td>
 <td>v11.0 AlphaFX BEAR a=+17</td>
 <td><span class="badge badge-tradeable">ELITE</span></td>
-<td class="gray" style="font-size:11px" data-sort="99.7831" title="drawn_at: 2026-07-19T23:50:14.006581+00:00">4d 3h</td>
+<td class="gray" style="font-size:11px" data-sort="99.8486" title="drawn_at: 2026-07-19T23:50:14.006581+00:00">4d 3h</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>GOOGL</td>
@@ -922,7 +932,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="87">87%</td>
 <td>v11.0 AlphaUS BULL a=+16 Miner</td>
 <td><span class="badge badge-tradeable">ELITE</span></td>
-<td class="gray" style="font-size:11px" data-sort="99.7949" title="drawn_at: 2026-07-19T23:49:31.641085+00:00">4d 3h</td>
+<td class="gray" style="font-size:11px" data-sort="99.8604" title="drawn_at: 2026-07-19T23:49:31.641085+00:00">4d 3h</td>
 </tr><tr>
 <td><span class="badge badge-buy">BUY</span></td>
 <td>AMZN</td>
@@ -935,7 +945,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td class="score-cell green" data-sort="84">84%</td>
 <td>v11.0 AlphaUS BULL a=+19 Miner</td>
 <td><span class="badge badge-tradeable">ELITE</span></td>
-<td class="gray" style="font-size:11px" data-sort="19.5584" title="drawn_at: 2026-07-23T08:03:42.869498+00:00">19.6h ago</td>
+<td class="gray" style="font-size:11px" data-sort="19.6239" title="drawn_at: 2026-07-23T08:03:42.869498+00:00">19.6h ago</td>
 </tr></tbody></table></div>
 
 <!-- Per-market tables -->
@@ -963,7 +973,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>2705.98</td>
 <td>2754.64</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="19.5767" title="drawn_at: 2026-07-23T08:02:36.909579+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
+<td class="gray" style="font-size:11px" data-sort="19.6422" title="drawn_at: 2026-07-23T08:02:36.909579+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
 </tr><tr>
 <td>ANTM</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -976,7 +986,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>3367.29</td>
 <td>3466.39</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="99.7975" title="drawn_at: 2026-07-19T23:49:21.941998+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">4d 3h</td>
+<td class="gray" style="font-size:11px" data-sort="99.8631" title="drawn_at: 2026-07-19T23:49:21.941998+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">4d 3h</td>
 </tr><tr>
 <td>MDKA</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -989,7 +999,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>3155.46</td>
 <td>3263.95</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="19.5767" title="drawn_at: 2026-07-23T08:02:36.909579+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
+<td class="gray" style="font-size:11px" data-sort="19.6422" title="drawn_at: 2026-07-23T08:02:36.909579+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
 </tr><tr>
 <td>PTBA</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1002,7 +1012,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>2572.32</td>
 <td>2616.43</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="19.5767" title="drawn_at: 2026-07-23T08:02:36.909579+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
+<td class="gray" style="font-size:11px" data-sort="19.6422" title="drawn_at: 2026-07-23T08:02:36.909579+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
 </tr><tr>
 <td>ITMG</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1015,7 +1025,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>25483.75</td>
 <td>25861.67</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="19.5767" title="drawn_at: 2026-07-23T08:02:36.909579+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
+<td class="gray" style="font-size:11px" data-sort="19.6422" title="drawn_at: 2026-07-23T08:02:36.909579+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
 </tr><tr>
 <td>TINS</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1028,7 +1038,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>4039.89</td>
 <td>4159.85</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="19.5767" title="drawn_at: 2026-07-23T08:02:36.909579+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
+<td class="gray" style="font-size:11px" data-sort="19.6422" title="drawn_at: 2026-07-23T08:02:36.909579+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
 </tr><tr>
 <td>AKRA</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1041,7 +1051,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>1555.14</td>
 <td>1596.86</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="19.5767" title="drawn_at: 2026-07-23T08:02:36.909579+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
+<td class="gray" style="font-size:11px" data-sort="19.6422" title="drawn_at: 2026-07-23T08:02:36.909579+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
 </tr><tr>
 <td>MAPI</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1054,7 +1064,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>1520.13</td>
 <td>1536.84</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="99.7975" title="drawn_at: 2026-07-19T23:49:21.941998+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">4d 3h</td>
+<td class="gray" style="font-size:11px" data-sort="99.8631" title="drawn_at: 2026-07-19T23:49:21.941998+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">4d 3h</td>
 </tr></tbody></table>
 </div>
 <div class="section" style="border-left:4px solid #5ac8fa">
@@ -1080,7 +1090,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>345.94</td>
 <td>357.97</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="19.5584" title="drawn_at: 2026-07-23T08:03:42.869498+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
+<td class="gray" style="font-size:11px" data-sort="19.6239" title="drawn_at: 2026-07-23T08:03:42.869498+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
 </tr><tr style="opacity:0.55">
 <td>MSFT</td>
 <td><span class="badge badge-sell">SELL</span></td>
@@ -1093,7 +1103,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>364.15</td>
 <td>346.35</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="orange" style="font-size:11px" data-sort="877.1358" title="drawn_at: 2026-06-17T14:29:04.108271+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">36d 13h ⚠️</td>
+<td class="orange" style="font-size:11px" data-sort="877.2013" title="drawn_at: 2026-06-17T14:29:04.108271+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">36d 13h ⚠️</td>
 </tr><tr style="opacity:0.55">
 <td>MSFT</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1106,7 +1116,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>434.23</td>
 <td>444.71</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="orange" style="font-size:11px" data-sort="1408.5614" title="drawn_at: 2026-05-26T11:03:32.142686+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">58d 16h ⚠️</td>
+<td class="orange" style="font-size:11px" data-sort="1408.6269" title="drawn_at: 2026-05-26T11:03:32.142686+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">58d 16h ⚠️</td>
 </tr><tr>
 <td>NVDA</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1119,7 +1129,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>230.44</td>
 <td>241.46</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="19.5584" title="drawn_at: 2026-07-23T08:03:42.869498+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
+<td class="gray" style="font-size:11px" data-sort="19.6239" title="drawn_at: 2026-07-23T08:03:42.869498+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
 </tr><tr>
 <td>GOOGL</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1132,7 +1142,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>376.0</td>
 <td>393.53</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="99.7949" title="drawn_at: 2026-07-19T23:49:31.641085+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">4d 3h</td>
+<td class="gray" style="font-size:11px" data-sort="99.8604" title="drawn_at: 2026-07-19T23:49:31.641085+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">4d 3h</td>
 </tr><tr>
 <td>AMZN</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1145,7 +1155,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>262.57</td>
 <td>273.21</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="19.5584" title="drawn_at: 2026-07-23T08:03:42.869498+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
+<td class="gray" style="font-size:11px" data-sort="19.6239" title="drawn_at: 2026-07-23T08:03:42.869498+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
 </tr><tr>
 <td>META</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1158,7 +1168,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>689.12</td>
 <td>726.29</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="19.5584" title="drawn_at: 2026-07-23T08:03:42.869498+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
+<td class="gray" style="font-size:11px" data-sort="19.6239" title="drawn_at: 2026-07-23T08:03:42.869498+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
 </tr><tr style="opacity:0.55">
 <td>META</td>
 <td><span class="badge badge-sell">SELL</span></td>
@@ -1171,7 +1181,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>544.21</td>
 <td>514.64</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="orange" style="font-size:11px" data-sort="877.1358" title="drawn_at: 2026-06-17T14:29:04.108271+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">36d 13h ⚠️</td>
+<td class="orange" style="font-size:11px" data-sort="877.2013" title="drawn_at: 2026-06-17T14:29:04.108271+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">36d 13h ⚠️</td>
 </tr><tr>
 <td>TSLA</td>
 <td><span class="badge badge-sell">SELL</span></td>
@@ -1184,7 +1194,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>333.86</td>
 <td>309.77</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="19.5584" title="drawn_at: 2026-07-23T08:03:42.869498+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
+<td class="gray" style="font-size:11px" data-sort="19.6239" title="drawn_at: 2026-07-23T08:03:42.869498+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
 </tr><tr>
 <td>AMD</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1197,7 +1207,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>645.53</td>
 <td>701.45</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="19.5584" title="drawn_at: 2026-07-23T08:03:42.869498+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
+<td class="gray" style="font-size:11px" data-sort="19.6239" title="drawn_at: 2026-07-23T08:03:42.869498+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
 </tr><tr>
 <td>AVGO</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1210,7 +1220,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>438.88</td>
 <td>464.13</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="19.5584" title="drawn_at: 2026-07-23T08:03:42.869498+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
+<td class="gray" style="font-size:11px" data-sort="19.6239" title="drawn_at: 2026-07-23T08:03:42.869498+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
 </tr><tr>
 <td>ARM</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1223,7 +1233,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>377.39</td>
 <td>424.43</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="245.1154" title="drawn_at: 2026-07-13T22:30:17.827759+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">10d 5h</td>
+<td class="gray" style="font-size:11px" data-sort="245.1809" title="drawn_at: 2026-07-13T22:30:17.827759+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">10d 5h</td>
 </tr><tr>
 <td>PLTR</td>
 <td><span class="badge badge-sell">SELL</span></td>
@@ -1236,7 +1246,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>109.52</td>
 <td>99.15</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="317.7566" title="drawn_at: 2026-07-10T21:51:49.409848+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">13d 5h</td>
+<td class="gray" style="font-size:11px" data-sort="317.8221" title="drawn_at: 2026-07-10T21:51:49.409848+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">13d 5h</td>
 </tr><tr>
 <td>CRWD</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1249,7 +1259,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>214.02</td>
 <td>229.38</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="19.5584" title="drawn_at: 2026-07-23T08:03:42.869498+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
+<td class="gray" style="font-size:11px" data-sort="19.6239" title="drawn_at: 2026-07-23T08:03:42.869498+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
 </tr><tr>
 <td>NFLX</td>
 <td><span class="badge badge-sell">SELL</span></td>
@@ -1262,7 +1272,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>61.88</td>
 <td>57.63</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="99.7949" title="drawn_at: 2026-07-19T23:49:31.641085+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">4d 3h</td>
+<td class="gray" style="font-size:11px" data-sort="99.8604" title="drawn_at: 2026-07-19T23:49:31.641085+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">4d 3h</td>
 </tr><tr style="opacity:0.55">
 <td>SPY</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1275,7 +1285,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>774.43</td>
 <td>788.89</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="orange" style="font-size:11px" data-sort="877.1358" title="drawn_at: 2026-06-17T14:29:04.108271+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">36d 13h ⚠️</td>
+<td class="orange" style="font-size:11px" data-sort="877.2013" title="drawn_at: 2026-06-17T14:29:04.108271+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">36d 13h ⚠️</td>
 </tr><tr>
 <td>QQQ</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1288,7 +1298,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>763.96</td>
 <td>787.03</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="317.7566" title="drawn_at: 2026-07-10T21:51:49.409848+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">13d 5h</td>
+<td class="gray" style="font-size:11px" data-sort="317.8221" title="drawn_at: 2026-07-10T21:51:49.409848+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">13d 5h</td>
 </tr><tr>
 <td>LLY</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1301,7 +1311,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>1256.21</td>
 <td>1312.13</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="19.5584" title="drawn_at: 2026-07-23T08:03:42.869498+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
+<td class="gray" style="font-size:11px" data-sort="19.6239" title="drawn_at: 2026-07-23T08:03:42.869498+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.6h ago</td>
 </tr><tr style="opacity:0.55">
 <td>XOM</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1314,7 +1324,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>160.74</td>
 <td>164.59</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="orange" style="font-size:11px" data-sort="1408.5614" title="drawn_at: 2026-05-26T11:03:32.142686+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">58d 16h ⚠️</td>
+<td class="orange" style="font-size:11px" data-sort="1408.6269" title="drawn_at: 2026-05-26T11:03:32.142686+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">58d 16h ⚠️</td>
 </tr><tr style="opacity:0.55">
 <td>COST</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1327,7 +1337,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>1066.94</td>
 <td>1092.45</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="orange" style="font-size:11px" data-sort="1408.5614" title="drawn_at: 2026-05-26T11:03:32.142686+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">58d 16h ⚠️</td>
+<td class="orange" style="font-size:11px" data-sort="1408.6269" title="drawn_at: 2026-05-26T11:03:32.142686+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">58d 16h ⚠️</td>
 </tr><tr>
 <td>COST</td>
 <td><span class="badge badge-sell">SELL</span></td>
@@ -1340,7 +1350,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>863.35</td>
 <td>831.61</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="317.7566" title="drawn_at: 2026-07-10T21:51:49.409848+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">13d 5h</td>
+<td class="gray" style="font-size:11px" data-sort="317.8221" title="drawn_at: 2026-07-10T21:51:49.409848+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">13d 5h</td>
 </tr><tr style="opacity:0.55">
 <td>MRVL</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1353,7 +1363,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>347.55</td>
 <td>388.87</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="orange" style="font-size:11px" data-sort="877.1358" title="drawn_at: 2026-06-17T14:29:04.108271+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">36d 13h ⚠️</td>
+<td class="orange" style="font-size:11px" data-sort="877.2013" title="drawn_at: 2026-06-17T14:29:04.108271+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">36d 13h ⚠️</td>
 </tr></tbody></table>
 </div>
 <div class="section" style="border-left:4px solid #ff9500">
@@ -1379,7 +1389,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>69522.1091</td>
 <td>72070.8902</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0273" title="drawn_at: 2026-07-24T03:35:34.650770+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">1m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0929" title="drawn_at: 2026-07-24T03:35:34.650770+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">5m ago</td>
 </tr><tr style="opacity:0.55">
 <td>ETHUSD</td>
 <td><span class="badge badge-sell">SELL</span></td>
@@ -1392,7 +1402,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>1816.84383</td>
 <td>1699.325185</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="orange" style="font-size:11px" data-sort="1435.4201" title="drawn_at: 2026-05-25T08:12:00.837074+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">59d 19h ⚠️</td>
+<td class="orange" style="font-size:11px" data-sort="1435.4856" title="drawn_at: 2026-05-25T08:12:00.837074+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">59d 19h ⚠️</td>
 </tr><tr>
 <td>ETHUSD</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1405,7 +1415,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>2041.6498</td>
 <td>2140.4276</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0273" title="drawn_at: 2026-07-24T03:35:34.650770+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">1m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0929" title="drawn_at: 2026-07-24T03:35:34.650770+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">5m ago</td>
 </tr><tr>
 <td>SOLUSD</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1418,7 +1428,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>82.7015</td>
 <td>87.3524</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="149.8392" title="drawn_at: 2026-07-17T21:46:51.927279+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">6d 5h</td>
+<td class="gray" style="font-size:11px" data-sort="149.9047" title="drawn_at: 2026-07-17T21:46:51.927279+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">6d 5h</td>
 </tr><tr>
 <td>BNBUSDT</td>
 <td><span class="badge badge-sell">SELL</span></td>
@@ -1431,7 +1441,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>537.7207</td>
 <td>518.7132</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0273" title="drawn_at: 2026-07-24T03:35:34.650770+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">1m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0929" title="drawn_at: 2026-07-24T03:35:34.650770+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">5m ago</td>
 </tr><tr>
 <td>XRPUSDT</td>
 <td><span class="badge badge-sell">SELL</span></td>
@@ -1444,7 +1454,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>1.0214</td>
 <td>0.968</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0273" title="drawn_at: 2026-07-24T03:35:34.650770+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">1m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0929" title="drawn_at: 2026-07-24T03:35:34.650770+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">5m ago</td>
 </tr><tr>
 <td>ADAUSDT</td>
 <td><span class="badge badge-sell">SELL</span></td>
@@ -1457,7 +1467,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>0.1406</td>
 <td>0.1271</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="173.3047" title="drawn_at: 2026-07-16T22:18:56.130546+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">7d 5h</td>
+<td class="gray" style="font-size:11px" data-sort="173.3702" title="drawn_at: 2026-07-16T22:18:56.130546+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">7d 5h</td>
 </tr><tr>
 <td>ADAUSDT</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1470,7 +1480,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>0.1887</td>
 <td>0.2016</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0273" title="drawn_at: 2026-07-24T03:35:34.650770+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">1m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0929" title="drawn_at: 2026-07-24T03:35:34.650770+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">5m ago</td>
 </tr><tr>
 <td>AVAXUSDT</td>
 <td><span class="badge badge-sell">SELL</span></td>
@@ -1483,7 +1493,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>5.599</td>
 <td>5.1964</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0273" title="drawn_at: 2026-07-24T03:35:34.650770+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">1m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0929" title="drawn_at: 2026-07-24T03:35:34.650770+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">5m ago</td>
 </tr><tr>
 <td>DOGEUSDT</td>
 <td><span class="badge badge-sell">SELL</span></td>
@@ -1496,7 +1506,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>0.063</td>
 <td>0.0593</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0273" title="drawn_at: 2026-07-24T03:35:34.650770+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">1m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0929" title="drawn_at: 2026-07-24T03:35:34.650770+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">5m ago</td>
 </tr><tr>
 <td>LINKUSDT</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1509,7 +1519,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>9.1435</td>
 <td>9.5548</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0273" title="drawn_at: 2026-07-24T03:35:34.650770+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">1m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0929" title="drawn_at: 2026-07-24T03:35:34.650770+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">5m ago</td>
 </tr><tr>
 <td>DOTUSDT</td>
 <td><span class="badge badge-sell">SELL</span></td>
@@ -1522,7 +1532,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>0.7292</td>
 <td>0.6772</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0273" title="drawn_at: 2026-07-24T03:35:34.650770+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">1m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0929" title="drawn_at: 2026-07-24T03:35:34.650770+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">5m ago</td>
 </tr><tr>
 <td>ATOMUSDT</td>
 <td><span class="badge badge-sell">SELL</span></td>
@@ -1535,7 +1545,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>1.3047</td>
 <td>1.2296</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0273" title="drawn_at: 2026-07-24T03:35:34.650770+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">1m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.0929" title="drawn_at: 2026-07-24T03:35:34.650770+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">5m ago</td>
 </tr></tbody></table>
 </div>
 <div class="section" style="border-left:4px solid #af52de">
@@ -1561,7 +1571,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>3801.4675</td>
 <td>3684.088</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="99.7831" title="drawn_at: 2026-07-19T23:50:14.006581+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">4d 3h</td>
+<td class="gray" style="font-size:11px" data-sort="99.8486" title="drawn_at: 2026-07-19T23:50:14.006581+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">4d 3h</td>
 </tr><tr>
 <td>XAGUSD</td>
 <td><span class="badge badge-sell">SELL</span></td>
@@ -1574,7 +1584,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>51.1</td>
 <td>48.148</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="99.7831" title="drawn_at: 2026-07-19T23:50:14.006581+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">4d 3h</td>
+<td class="gray" style="font-size:11px" data-sort="99.8486" title="drawn_at: 2026-07-19T23:50:14.006581+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">4d 3h</td>
 </tr><tr>
 <td>EURUSD</td>
 <td><span class="badge badge-sell">SELL</span></td>
@@ -1587,7 +1597,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>1.12854</td>
 <td>1.11987</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="99.7831" title="drawn_at: 2026-07-19T23:50:14.006581+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">4d 3h</td>
+<td class="gray" style="font-size:11px" data-sort="99.8486" title="drawn_at: 2026-07-19T23:50:14.006581+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">4d 3h</td>
 </tr><tr>
 <td>GBPUSD</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1600,7 +1610,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>1.35804</td>
 <td>1.37051</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="19.7366" title="drawn_at: 2026-07-23T07:53:01.369543+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.7h ago</td>
+<td class="gray" style="font-size:11px" data-sort="19.8021" title="drawn_at: 2026-07-23T07:53:01.369543+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.8h ago</td>
 </tr><tr>
 <td>USDJPY</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1613,7 +1623,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>165.5735</td>
 <td>166.619</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0724" title="drawn_at: 2026-07-24T03:32:52.437331+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">4m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.1379" title="drawn_at: 2026-07-24T03:32:52.437331+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">8m ago</td>
 </tr><tr>
 <td>NZDUSD</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1626,7 +1636,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>0.59208</td>
 <td>0.59921</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="19.7366" title="drawn_at: 2026-07-23T07:53:01.369543+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.7h ago</td>
+<td class="gray" style="font-size:11px" data-sort="19.8021" title="drawn_at: 2026-07-23T07:53:01.369543+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.8h ago</td>
 </tr><tr>
 <td>USDCHF</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1639,7 +1649,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>0.83006</td>
 <td>0.83779</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0724" title="drawn_at: 2026-07-24T03:32:52.437331+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">4m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.1379" title="drawn_at: 2026-07-24T03:32:52.437331+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">8m ago</td>
 </tr><tr>
 <td>EURJPY</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1652,7 +1662,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>188.469</td>
 <td>189.678</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0724" title="drawn_at: 2026-07-24T03:32:52.437331+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">4m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.1379" title="drawn_at: 2026-07-24T03:32:52.437331+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">8m ago</td>
 </tr><tr>
 <td>GBPJPY</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1665,7 +1675,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>220.971</td>
 <td>222.69</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0724" title="drawn_at: 2026-07-24T03:32:52.437331+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">4m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.1379" title="drawn_at: 2026-07-24T03:32:52.437331+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">8m ago</td>
 </tr><tr>
 <td>EURGBP</td>
 <td><span class="badge badge-sell">SELL</span></td>
@@ -1678,7 +1688,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>0.84662</td>
 <td>0.84172</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0724" title="drawn_at: 2026-07-24T03:32:52.437331+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">4m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.1379" title="drawn_at: 2026-07-24T03:32:52.437331+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">8m ago</td>
 </tr><tr>
 <td>AUDJPY</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1691,7 +1701,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>116.0375</td>
 <td>117.101</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0724" title="drawn_at: 2026-07-24T03:32:52.437331+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">4m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.1379" title="drawn_at: 2026-07-24T03:32:52.437331+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">8m ago</td>
 </tr><tr>
 <td>EURAUD</td>
 <td><span class="badge badge-sell">SELL</span></td>
@@ -1704,7 +1714,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>1.61215</td>
 <td>1.60048</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="0.0724" title="drawn_at: 2026-07-24T03:32:52.437331+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">4m ago</td>
+<td class="gray" style="font-size:11px" data-sort="0.1379" title="drawn_at: 2026-07-24T03:32:52.437331+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">8m ago</td>
 </tr><tr>
 <td>GBPAUD</td>
 <td><span class="badge badge-buy">BUY</span></td>
@@ -1717,7 +1727,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>1.95302</td>
 <td>1.96872</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="149.7773" title="drawn_at: 2026-07-17T21:50:34.800888+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">6d 5h</td>
+<td class="gray" style="font-size:11px" data-sort="149.8428" title="drawn_at: 2026-07-17T21:50:34.800888+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">6d 5h</td>
 </tr><tr>
 <td>GBPAUD</td>
 <td><span class="badge badge-sell">SELL</span></td>
@@ -1730,7 +1740,7 @@ MANUAL = trade tangan sendiri (magic 0) · EA XAU/BTC/XAG/ETH = Alpha Scalper M1
 <td>1.88277</td>
 <td>1.86656</td>
 <td style="font-size:11px;color:#6e6e73" title="ETA TP3 typical">1-3w</td>
-<td class="gray" style="font-size:11px" data-sort="19.7366" title="drawn_at: 2026-07-23T07:53:01.369543+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.7h ago</td>
+<td class="gray" style="font-size:11px" data-sort="19.8021" title="drawn_at: 2026-07-23T07:53:01.369543+00:00. STALE = lebih lama dari max age TF, kemungkinan scan lama.">19.8h ago</td>
 </tr></tbody></table>
 </div>
 
